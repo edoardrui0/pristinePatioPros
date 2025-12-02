@@ -9,6 +9,7 @@ import FAQ from "@components/FAQ/FAQ.astro";
 // import SideBySide from "@components/SideBySide/SideBySide.astro";
 import SBS1 from "@components/AboutComponents/SBS1.astro";
 import SBS2 from "@components/AboutComponents/SBS2.astro";
+import Stats from "@components/Stats/stats.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
@@ -26,5 +27,6 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	<SBS1 />
 	<SBS2 />
 	<FAQ />
+	<Stats />
 	<CTA />
 </BaseLayout>

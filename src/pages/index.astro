@@ -11,6 +11,7 @@ import SideBySideReverse from "@components/SideBySideReverse/SideBySideReverse.a
 import Gallery from "@components/Gallery/Gallery.astro";
 import Testimonials from "@components/Testimonials/Testimonials.astro";
 import FAQ from "@components/FAQ/FAQ.astro";
+import Stats from "@components/Stats/stats.astro";
 import CTASimple from "@components/CTA/CTASimple.astro";
 
 // Optimize our landing image and pass it as props to the BaseLayout (for preloading) and Banner (for rendering)
@@ -30,5 +31,6 @@ const optimizedHeroImage = await getImage({ src: heroImage, format: "webp" });
 	<Gallery />
 	<Testimonials />
 	<FAQ />
+	<Stats />
 	<CTASimple />
 </BaseLayout>
