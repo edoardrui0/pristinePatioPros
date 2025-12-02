@@ -5,7 +5,7 @@ import { Picture, getImage } from "astro:assets";
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import SBS1 from "@components/ServicesPage/Layout1/SBS1.astro";
+import SBS1 from "@components/ServicesPage/Layout3/SBS1.astro";
 import SBS2 from "@components/ServicesPage/SBS2.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
@@ -19,7 +19,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	description="Meta description for the page"
 	heroImage={optimizedImage}
 >
-	<Banner title="Service 1" image={optimizedImage} />
+	<Banner title="Service 6" image={optimizedImage} />
 	<SBS1 />
 	<SBS2 />
 	<CTA />
