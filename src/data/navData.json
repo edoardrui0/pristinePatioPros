@@ -10,16 +10,20 @@
     "children": []
   },
   {
-    "key": "Projects",
-    "url": "/projects/",
+    "key": "Services",
+    "url": "/services/",
     "children": [
       {
-        "key": "Project 1",
-        "url": "/projects/project-1/"
+        "key": "Services 1",
+        "url": "/services/service-1/"
       },
       {
-        "key": "Project 2",
-        "url": "/projects/project-2/"
+        "key": "Services 2",
+        "url": "/services/service-2/"
+      },
+      {
+        "key": "Services 3",
+        "url": "/services/service-3/"
       }
     ]
   },
