@@ -6,7 +6,7 @@ import "@styles/root.less";
 import "@styles/dark.less";
 
 // Components
-import DynamicHeader from "@components/Header/DynamicHeader.astro";
+import CustomHeader from "@components/Header/CustomHeader.astro";
 import Footer from "@components/Footer/Footer.astro";
 import Meta from "@components/Meta/Meta.astro";
 
@@ -43,9 +43,11 @@ const { description, title, heroImage } = Astro.props as Props;
 	</head>
 	<body>
 		<!-- Screen reader skip main nav -->
-		<a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+		<a class="skip" aria-label="skip to main content" href="#main"
+			>Click To Skip To Main Content</a
+		>
 
-		<DynamicHeader />
+		<CustomHeader />
 		<main id="main">
 			<slot />
 		</main>
@@ -74,7 +76,10 @@ const { description, title, heroImage } = Astro.props as Props;
 			theme = localStorage.getItem("theme");
 		}
 		// if it's not there, check to see if the user has applied dark mode preferences themselves in the browser
-		else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+		else if (
+			window.matchMedia &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches
+		) {
 			theme = "dark";
 		}
 

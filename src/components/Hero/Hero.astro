@@ -10,13 +10,50 @@ import { Picture } from "astro:assets";
 import type { GetImageResult } from "astro";
 
 interface Props {
-	image: GetImageResult; // pre-optimized image from getImage()
+  image: GetImageResult; // pre-optimized image from getImage()
 }
 
 const { image } = Astro.props as Props;
 ---
 
-<section id="hero">
+<!-- HERO NEW -->
+<section id="hero-331">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <h1 class="cs-title">
+        <span class="cs-accent">Professional</span> Cleaning Service for Your Home
+        And Other Area
+      </h1>
+      <p class="cs-text">
+        We are committed to the best quality in the field of industrial
+        cleaning, home and garden cleaning.
+      </p>
+      <div class="cs-button-group">
+        <a href="/contact" class="cs-button-solid">Get Started</a>
+        <a href="" class="cs-button-transparent">
+          <picture class="cs-icon">
+            <Icon name="play" class="cs-img" />
+          </picture>
+          See Prices
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  <Picture
+    src={image.src}
+    alt="new home"
+    width={image.attributes.width}
+    height={image.attributes.height}
+    formats={["avif", "webp"]}
+    priority
+    pictureAttributes={{ class: "cs-background" }}
+  />
+</section>
+
+<!-- HERO OLD -->
+<!-- <section id="hero">
 	<div class="cs-container">
 		<div class="cs-flex-group">
 			<span class="cs-topper">Intermediate Kit</span>
@@ -30,233 +67,303 @@ const { image } = Astro.props as Props;
 		</div>
 	</div>
 
-	<!-- Using the preloaded image from the props -->
+	Using the preloaded image from the props
 	<Picture src={image.src} alt="new home" width={image.attributes.width} height={image.attributes.height} formats={["avif", "webp"]} priority pictureAttributes={{ class: "cs-picture" }} />
-</section>
+</section> -->
 
 <style lang="less">
-	/*-- -------------------------- -->
+  /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
 
-	/* Mobile - 360px */
-	@media only screen and (min-width: 0em) {
-		#hero {
-			font-family: "Roboto", "Arial", sans-serif;
-			/* Centers button */
-			text-align: center;
-			/* changes on tablet */
-			padding: 0 (16/16rem);
-			padding-bottom: (100/16rem);
-			position: relative;
-			z-index: 1;
-			/* prevents overflow from the lines extending past the screen width */
-			overflow: hidden;
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #hero-331 {
+      /* Centers button */
+      text-align: center;
+      /* changes on tablet */
+      padding: clamp(9rem, 25.95vw, 17.5rem) (16/16rem);
+      /* 150px - 250px */
+      padding-bottom: clamp(9.375rem, 30.5vw, 15.625rem);
+      position: relative;
+      z-index: 1;
+      /* prevents overflow from the lines extending past the screen width */
+      overflow: hidden;
 
-			.cs-picture {
-				/* Background Image */
-				width: 100%;
-				height: 100%;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -2;
+      .cs-background {
+        /* Background Image */
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
 
-				&:before {
-					/* Black Color Overlay */
-					content: "";
-					width: 100%;
-					height: 100%;
-					background: #000;
-					opacity: 0.7;
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 1;
-					/* prevents the cursor from interacting with it */
-					pointer-events: none;
-				}
+        &:before {
+          /* White Color Overlay */
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          opacity: 0.85;
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          /* prevents the cursor from interacting with it */
+          pointer-events: none;
+        }
 
-				img {
-					width: 100%;
-					height: 100%;
-					/* Makes image act like a background-image */
-					object-fit: cover;
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
-			}
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes image act like a background-image */
+          object-fit: cover;
+          /* places the top of the image at the top of the parent */
+          object-position: top;
+        }
+      }
 
-			.cs-container {
-				width: 100%;
-				max-width: (1280/16em);
-				margin: auto;
-				/* we put the padding top and bottom on the container instead of #Hero so the pseudo element lines go to the top and bottom of the section */
-				/* 144px - 280px - leaving extra space for the navigation */
-				/* changes on tablet */
-				padding: clamp(9em, 25.95vw, 17.5em) 0;
-				position: relative;
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        position: relative;
+      }
 
-				&:before {
-					/* Left Line */
-					content: "";
-					width: 1px;
-					height: 100%;
-					background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* FF3.6-15 */
-					background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-					opacity: 1;
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-				}
-			}
+      .cs-flex-group {
+        /* 456px - 626px */
+        max-width: clamp(28.5rem, 62vw, 39.125rem);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+      }
 
-			.cs-flex-group {
-				width: 80vw;
-				/* 464px - 562px */
-				max-width: clamp(29em, 60vw, 35.125em);
-				margin: auto;
-				/* 60px - 220px */
-				margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
-				box-sizing: border-box;
-				display: flex;
-				justify-content: center;
-				align-items: flex-start;
-				flex-wrap: wrap;
-			}
+      .cs-title {
+        /* 39px - 61px */
+        font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: left;
+        width: 100%;
+        margin: 0 auto (16/16rem);
+        color: var(--headerColor);
+        position: relative;
+      }
 
-			.cs-topper {
-				text-align: center;
-				margin-bottom: (16/16rem);
-				color: var(--primary);
-			}
+      .cs-accent {
+        color: var(--primary);
+      }
 
-			.cs-title {
-				text-align: center;
-				width: 100%;
-				color: var(--bodyTextColorWhite);
-			}
+      .cs-text {
+        /* 16px - 20px */
+        font-size: clamp(1rem, 1.95vw, 1.25rem);
+        line-height: 1.5em;
+        text-align: left;
+        width: 100%;
+        max-width: (442/16rem);
+        /* 32px - 40px */
+        margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+        /* 24px - 40px */
+        margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+        color: var(--bodyTextColor);
+      }
 
-			.cs-text {
-				text-align: center;
-				/* 32px - 40px */
-				margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
-				/* 40px - 48px */
-				margin-bottom: clamp(2.5rem, 4vw, 3rem);
-				color: var(--bodyTextColorWhite);
-			}
+      .cs-button-group {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: (16/16rem);
+      }
 
-			.cs-button-solid {
-				line-height: clamp(2.875em, 5.5vw, 3.5em);
-				height: initial;
-				margin-bottom: calc(16 / 16 * 1rem);
-			}
+      .cs-button-solid {
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        width: (180/16rem);
+        text-decoration: none;
+        font-weight: 700;
+        border-radius: (8/16rem);
+        /* clips corners of the before element */
+        overflow: hidden;
+        margin: 0;
+        color: #fff;
+        padding: 0;
+        background-color: var(--secondary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
 
-			.cs-button-transparent {
-				font-size: (16/16rem);
-				font-weight: 700;
-				/* 46px - 56px */
-				line-height: clamp(2.875em, 5.5vw, 3.5em);
-				text-decoration: none;
-				width: (180/16rem);
-				/* 46px - 56px */
-				height: clamp(2.875em, 5.5vw, 3.5em);
-				margin: 0 (8/16rem);
-				box-sizing: border-box;
-				padding: 0;
-				color: #fff;
-				background-color: transparent;
-				border: 1px solid var(--bodyTextColorWhite);
-				display: inline-flex;
-				justify-content: center;
-				align-items: center;
-				position: relative;
-				z-index: 1;
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          transition: width 0.3s;
+        }
 
-				&:before {
-					content: "";
-					background: #000;
-					opacity: 1;
-					display: block;
-					position: absolute;
-					/* so it sits on top of the border */
-					top: -1px;
-					right: -1px;
-					bottom: -1px;
-					left: -1px;
-					z-index: -1;
-					/* this is what creates the grow affect on hover */
-					transform: scaleX(0);
-					transition: transform 0.3s;
-					transform-origin: left;
-				}
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
 
-				&:hover {
-					&:before {
-						transform: scaleX(1);
-					}
-				}
+      .cs-button-transparent {
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        width: (180/16rem);
+        /* 46px - 56px */
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: var(--primary);
+        padding: 0;
+        background-color: transparent;
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        z-index: 1;
 
-				.cs-img {
-					margin-right: (12/16rem);
-					display: block;
-				}
-			}
-		}
-	}
+        &:before {
+          /* white hover box */
+          content: "";
+          /* 46px - 56px */
+          width: clamp(2.875rem, 5.5vw, 3.5rem);
+          background: #fff;
+          border-radius: (28/16rem);
+          opacity: 1;
+          position: absolute;
+          display: block;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          z-index: -1;
+          transition:
+            width 0.3s,
+            box-shadow 0.3s;
+        }
 
-	/* Tablet - 768px */
-	@media only screen and (min-width: 48em) {
-		#hero {
-			/* 32px - 40px */
-			padding: 0 clamp(2em, 5vw, 2.5em);
+        &:hover {
+          &:before {
+            width: 100%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          }
+        }
+      }
 
-			.cs-container {
-				padding: clamp(7em, 27.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
-				&:after {
-					/* Right Line */
-					content: "";
-					width: 1px;
-					height: 100%;
-					background: -moz-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* FF3.6-15 */
-					background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0) 0%, rgba(250, 251, 252, 0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-					opacity: 1;
-					display: block;
-					position: absolute;
-					top: 0;
-					right: 0;
-				}
-			}
+      .cs-icon {
+        /* 46px - 56px */
+        width: clamp(2.875rem, 5.5vw, 3.5rem);
+        height: clamp(2.875rem, 5.5vw, 3.5rem);
+        margin-right: (8/16rem);
+        background-color: var(--primary);
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-			.cs-button-solid {
-				margin-right: (20/16rem);
-				margin-bottom: 0;
-			}
-		}
-	}
+      .cs-image {
+        width: (12/16rem);
+        height: auto;
+      }
+    }
+  }
 
-	/* Desktop Parallax Effect - 1300px */
-	/* Note: Parallax effect removed as Picture component handles responsive images */
-	@media only screen and (min-width: 81.25em) {
-		#hero {
-			/* Picture component provides optimized images */
-		}
-	}
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #hero-331 {
+      .cs-background {
+        &:before {
+          width: 80%;
+          background: -moz-linear-gradient(
+            left,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          background: -webkit-linear-gradient(
+            left,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          background: linear-gradient(
+            to right,
+            rgba(247, 247, 247, 1) 47%,
+            rgba(249, 249, 249, 1) 59%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          opacity: 1;
+        }
+      }
+    }
+  }
 
-	/* Dark Mode */
-	@media only screen and (min-width: 0em) {
-		body.dark-mode {
-			#hero {
-				.cs-background {
-					&:before {
-						opacity: 0.8;
-					}
-				}
-			}
-		}
-	}
+  /* Dark Mode */
+  @media only screen and (min-width: 0rem) {
+    body.dark-mode {
+      #hero-331 {
+        .cs-background {
+          background-color: #000;
+          &:before {
+            width: 100%;
+            background: -moz-linear-gradient(
+              left,
+              rgba(0, 0, 0, 1) 21%,
+              rgba(0, 0, 0, 0.67) 47%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            background: -webkit-linear-gradient(
+              left,
+              rgba(0, 0, 0, 1) 21%,
+              rgba(0, 0, 0, 0.67) 47%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            background: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 1) 21%,
+              rgba(0, 0, 0, 0.67) 47%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 );
+            opacity: 1;
+          }
+          img {
+            opacity: 0.5;
+          }
+        }
+
+        .cs-title {
+          color: var(--bodyTextColorWhite);
+        }
+        .cs-text {
+          color: var(--bodyTextColorWhite);
+          opacity: 0.8;
+        }
+      }
+    }
+  }
 </style>
