@@ -10,146 +10,282 @@ import { Picture } from "astro:assets";
 import ctaImage from "@assets/images/CTA/cabinets2.jpg";
 ---
 
-<section id="cta">
-	<div class="container">
-		<h2 class="title">
-			Get It Done
-			<br />
-			With Us Today
-		</h2>
-		<p>Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add these to the bottom of all pages.</p>
-		<a href="/contact/" class="cs-button-solid">Get an Estimate Now</a>
-	</div>
-	<Picture src={ctaImage} alt="" layout="full-width" formats={["avif", "webp"]} pictureAttributes={{ class: "cs-picture" }} />
+<!-- ============================================ --><!--                    CTA                       --><!-- ============================================ -->
+<section id="cta-384">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Team</span>
+      <h2 class="cs-title">Do you need a perfect cleaning?</h2>
+      <p class="cs-text">
+        We love what we do and we do it with passion. We value the
+        experimentation of the smart incentives.
+      </p>
+      <a href="/contact" class="cs-button-solid">Get A Quote</a>
+    </div>
+    <div class="cs-image-group">
+      <!--Powder Image-->
+      <picture class="cs-powder">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/CTA/powder.png"
+          alt="powder"
+          width="485"
+          height="460"
+          aria-hidden="true"
+        />
+      </picture>
+      <!--Bucket Image-->
+      <picture class="cs-bucket">
+        <source
+          media="(max-width: 600px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/bucket.png"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/bucket.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/CTA/bucket.png"
+          alt="bucket"
+          width="543"
+          height="437"
+          aria-hidden="true"
+        />
+      </picture>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      media="(max-width: 600px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric-m.png"
+    />
+    <source
+      media="(min-width: 601px)"
+      srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png"
+    />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png"
+      alt="fabric"
+      width="1920"
+      height="660"
+      aria-hidden="true"
+    />
+  </picture>
 </section>
 
+<!-- <section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Get It Done
+      <br />
+      With Us Today
+    </h2>
+    <p>
+      Say something catchy, informative, and encouraging to click the button to
+      go to the contact page. I like to add these to the bottom of all pages.
+    </p>
+    <a href="/contact/" class="cs-button-solid">Get an Estimate Now</a>
+  </div>
+  <Picture
+    src={ctaImage}
+    alt=""
+    layout="full-width"
+    formats={["avif", "webp"]}
+    pictureAttributes={{ class: "cs-picture" }}
+  />
+</section> -->
+
 <style lang="less">
-	/* Mobile */
-	@media only screen and (min-width: 0em) {
-		#cta {
-			padding: (50/16rem) 0;
-			position: relative;
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #cta-384 {
+      padding: var(--sectionPadding);
+      position: relative;
 
-			&:before {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: #000;
-				opacity: 0.7;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -1;
-			}
+      .cs-background {
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background-blend-mode: multiply;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
 
-			.container {
-				text-align: center;
-			}
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          /* Makes img tag act as a background image */
+          object-fit: cover;
+        }
+      }
 
-			.title {
-				font-size: ~"min(9vw, 3rem)";
-				font-weight: 900;
-				line-height: 58/48;
-				text-align: center;
-				margin-bottom: (36/16rem);
-				color: #fff;
-				position: relative;
-			}
+      .cs-container {
+        width: 100%;
+        max-width: (1280/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+      }
 
-			p {
-				text-align: center;
-				width: 96%;
-				max-width: (598/16rem);
-				margin: auto;
-				margin-bottom: (36/16rem);
-				color: #fff;
-				opacity: 1;
-			}
+      .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: (434/16rem);
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+      }
 
-			.cs-picture {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -2;
+      .cs-text {
+        margin-bottom: (16/16rem);
+        &:last-of-type {
+          margin-bottom: (32/16rem);
+        }
+      }
 
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
-	}
+      .cs-button-solid {
+        font-size: (16/16rem);
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: (150/16rem);
+        padding: 0 (24/16rem);
+        background-color: var(--primary);
+        border-radius: (4/16rem);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
 
-	/* Small Desktop */
-	@media only screen and (min-width: 64em) {
-		#cta {
-			padding: (168/16rem) 0;
-		}
-	}
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 0%;
+          background: #000;
+          opacity: 1;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-radius: (4/16rem);
+          transition: width 0.3s;
+        }
 
-	/* Large Desktop */
-	@media only screen and (min-width: 1300px) {
-		#cta {
-			margin-top: (100/16rem);
-			position: relative;
-			&:before {
-				display: none;
-			}
-			&:after {
-				content: "";
-				// width: (2000/16rem);
-				width: 100%; /* a fixed width causes overflow on desktop */
-				height: (1108/16rem);
-				background: url("/src/icons/cta-squares.svg");
-				background-position: center;
-				background-size: contain;
-				background-repeat: no-repeat;
-				opacity: 1;
-				display: block;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				z-index: -3;
-				transform: translateX(-50%);
-			}
-			.container {
-				width: 90.0625%;
-				margin: auto;
-			}
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
 
-			.cs-picture {
-				width: 90.0625%;
-				left: 50%;
-				transform: translateX(-50%);
-				&:before {
-					content: "";
-					width: 100%;
-					height: 100%;
-					background: #000;
-					opacity: 0.7;
-					display: block;
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 1;
-				}
-			}
-		}
-	}
+      .cs-image-group {
+        /* everything is in ems so we can scale the container down with a font size */
+        font-size: ~"min(2.6vw, .8em)";
+        width: (543/16em);
+        height: (460/16em);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-	/* Dark Mode */
-	@media only screen and (min-width: 0em) {
-		body.dark-mode {
-			#cta {
-				&:after {
-					display: none;
-				}
-			}
-		}
-	}
+      .cs-bucket {
+        width: (543/16em);
+        height: auto;
+        display: block;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .cs-powder {
+        width: (485/16em);
+        height: auto;
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: -1;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #cta-384 {
+      .cs-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .cs-content {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      .cs-image-group {
+        font-size: ~"min(1.45vw, 1em)";
+      }
+    }
+  }
+
+  /* Dark Mode */
+  @media only screen and (min-width: 0rem) {
+    body.dark-mode {
+      #cta-384 {
+        .cs-background {
+          opacity: 0.25;
+          /* brighten the image to be whiter and show up against dark background */
+          filter: grayscale(1) brightness(2000%);
+        }
+
+        .cs-topper {
+          color: var(--primaryLight);
+        }
+
+        .cs-title,
+        .cs-text {
+          color: var(--bodyTextColorWhite);
+        }
+      }
+    }
+  }
 </style>
