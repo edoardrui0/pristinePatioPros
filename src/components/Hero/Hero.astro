@@ -82,7 +82,12 @@ const { image } = Astro.props as Props;
           content: "";
           width: 100%;
           height: 100%;
-          background: #fff;
+          background: linear-gradient(
+            to top,
+            #76a9ea 30%,
+            #accbf3 50%,
+            rgba(255, 255, 255, 0) 100%
+          );
           opacity: 0.85;
           position: absolute;
           display: block;
@@ -289,10 +294,11 @@ const { image } = Astro.props as Props;
           );
           background: linear-gradient(
             to right,
-            rgba(247, 247, 247, 1) 47%,
-            rgba(249, 249, 249, 1) 59%,
+            #76a9ea 30%,
+            #accbf3 50%,
             rgba(255, 255, 255, 0) 100%
           );
+
           opacity: 1;
         }
       }
