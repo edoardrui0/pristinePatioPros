@@ -7,6 +7,8 @@ import { Picture } from "astro:assets";
 // Images
 import construction from "@assets/images/services/construction.jpg";
 import cabinets2 from "@assets/images/services/cabinets2.jpg";
+import image from "@assets/images/backgrounds/rainbow-vortex.png";
+import rippleBG from "@assets/SVGs/rainbow-vortex.svg";
 ---
 
 <section id="sbs-r">
@@ -213,6 +215,17 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
       </div>
     </div>
   </div>
+  <!-- Background Image -->
+  <img
+    alt="svg waves"
+    decoding="async"
+    src={rippleBG.src}
+    aria-hidden="true"
+    loading="lazy"
+    class="cs-background"
+    height="568"
+    width="1280"
+  />
 </section>
 
 <!-- <section id="sbs-r">
@@ -268,6 +281,17 @@ import cabinets2 from "@assets/images/services/cabinets2.jpg";
       overflow: hidden;
       z-index: 1;
       background-color: var(--backgroundBreak);
+
+      .cs-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.75;
+        object-fit: cover;
+        z-index: -1;
+      }
 
       .cs-container {
         width: 100%;
