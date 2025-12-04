@@ -14,6 +14,7 @@ import port6 from "@assets/images/projects/port6.jpg";
 import port7 from "@assets/images/projects/port7.jpg";
 import port8 from "@assets/images/projects/port8.jpg";
 import port9 from "@assets/images/projects/port9.jpg";
+import linesBG from "@assets/SVGs/Curve-Line.svg";
 ---
 
 <section id="gallery-380">
@@ -228,6 +229,16 @@ import port9 from "@assets/images/projects/port9.jpg";
       </a>
     </div>
   </div>
+  <img
+    alt="svg waves"
+    decoding="async"
+    src={linesBG.src}
+    aria-hidden="true"
+    loading="lazy"
+    class="cs-background"
+    height="568"
+    width="1280"
+  />
 </section>
 
 <!-- <section id="gallery">
@@ -335,6 +346,9 @@ import port9 from "@assets/images/projects/port9.jpg";
   @media only screen and (min-width: 0rem) {
     #gallery-380 {
       padding: var(--sectionPadding);
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
 
       .cs-container {
         width: 100%;
@@ -345,6 +359,17 @@ import port9 from "@assets/images/projects/port9.jpg";
         align-items: center;
         /* 48px - 64px */
         gap: clamp(3rem, 6vw, 4rem);
+      }
+
+      .cs-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0.75;
+        object-fit: cover;
+        z-index: -1;
       }
 
       .cs-content {

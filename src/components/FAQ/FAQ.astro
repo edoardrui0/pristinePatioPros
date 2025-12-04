@@ -1,5 +1,8 @@
 ---
 // No utils nor props for this component
+import darkBlueBlob from "@assets/SVGs/dark-blue-blob.svg";
+import blueBlob from "@assets/SVGs/blue-blob.svg";
+import redBlob from "@assets/SVGs/red-blob.svg";
 ---
 
 <section id="faq-389">
@@ -90,7 +93,7 @@
         class="cs-orange"
         loading="lazy"
         decoding="async"
-        src="https://csimg.nyc3.digitaloceanspaces.com/FAQ/orange-blob.svg"
+        src={blueBlob.src}
         alt="orange blob"
         width="305"
         height="343"
@@ -115,7 +118,7 @@
         class="cs-blue"
         loading="lazy"
         decoding="async"
-        src="https://csimg.nyc3.digitaloceanspaces.com/FAQ/blue-blob.svg"
+        src={redBlob.src}
         alt="blue blob"
         width="343"
         height="305"
@@ -140,7 +143,7 @@
         class="cs-grey"
         loading="lazy"
         decoding="async"
-        src="https://csimg.nyc3.digitaloceanspaces.com/FAQ/grey-blob.svg"
+        src={darkBlueBlob.src}
         alt="grey blob"
         width="305"
         height="343"

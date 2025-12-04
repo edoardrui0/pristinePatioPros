@@ -860,6 +860,7 @@ import navData from "@data/navData.json";
         padding: clamp(1.5rem, 2.1vw, 1.75rem) 0;
         /* prevent flexbox from squishing it */
         flex: none;
+        font-weight: 600;
         &:last-of-type {
           /* pushes the button to the far roght */
           margin-left: auto;
@@ -1673,7 +1674,7 @@ import navData from "@data/navData.json";
           background-color 0.3s;
 
         &:hover {
-          background-color: var(--headerColor);
+          background-color: var(--primary);
           color: #fff;
           .cs-icon {
             filter: grayscale(1) brightness(1000%);

@@ -8,9 +8,9 @@ import { Picture } from "astro:assets";
 
 // Images
 import ctaImage from "@assets/images/CTA/cabinets2.jpg";
+import washerIMG from "@assets/images/CTA/pressure-washer.jpg";
 ---
 
-<!-- ============================================ --><!--                    CTA                       --><!-- ============================================ -->
 <section id="cta-384">
   <div class="cs-container">
     <div class="cs-content">
@@ -45,7 +45,15 @@ import ctaImage from "@assets/images/CTA/cabinets2.jpg";
       </picture>
       <!--Bucket Image-->
       <picture class="cs-bucket">
-        <source
+        <Picture
+          src={washerIMG}
+          alt=""
+          width={500}
+          loading={"lazy"}
+          formats={["avif", "webp"]}
+          quality={40}
+        />
+        <!-- <source
           media="(max-width: 600px)"
           srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/bucket.png"
         />
@@ -61,7 +69,7 @@ import ctaImage from "@assets/images/CTA/cabinets2.jpg";
           width="543"
           height="437"
           aria-hidden="true"
-        />
+        /> -->
       </picture>
     </div>
   </div>
@@ -119,7 +127,6 @@ import ctaImage from "@assets/images/CTA/cabinets2.jpg";
       .cs-background {
         width: 100%;
         height: 100%;
-        opacity: 0.5;
         background-blend-mode: multiply;
         display: block;
         position: absolute;
