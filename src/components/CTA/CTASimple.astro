@@ -44,16 +44,17 @@ import washerIMG from "@assets/images/CTA/pressure-washer.jpg";
         />
       </picture>
       <!--Bucket Image-->
-      <picture class="cs-bucket">
-        <Picture
-          src={washerIMG}
-          alt=""
-          width={500}
-          loading={"lazy"}
-          formats={["avif", "webp"]}
-          quality={40}
-        />
-        <!-- <source
+
+      <Picture
+        src={washerIMG}
+        alt=""
+        width={500}
+        loading={"lazy"}
+        formats={["avif", "webp"]}
+        quality={40}
+        pictureAttributes={{ class: "cs-bucket" }}
+      />
+      <!-- <source
           media="(max-width: 600px)"
           srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/bucket.png"
         />
@@ -70,7 +71,6 @@ import washerIMG from "@assets/images/CTA/pressure-washer.jpg";
           height="437"
           aria-hidden="true"
         /> -->
-      </picture>
     </div>
   </div>
   <!--Background Image-->
