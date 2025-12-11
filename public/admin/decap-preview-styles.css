@@ -2,10 +2,12 @@
 /* THe classses should match the elements created in the Decap CMS preview pane script in admin.astro */
 
 :root {
-	--primary: hsl(80, 90%, 55%);
-	--primaryLight: hsl(80, 60%, 40%);
-	--secondary: #001f3f;
+	--primary: #2549C1;
+	--primaryLight: #D9ECFC;
+	--secondary: #F75959;
 	--secondaryLight: #001f3f;
+	--backgroundBreak: #f7f7f7;
+	--backgroundBreakBlue: #76a9ea;
 	--headerColor: #1a1a1a;
 	--bodyTextColor: #4e4b66;
 	--bodyTextColorWhite: #fafbfc;
