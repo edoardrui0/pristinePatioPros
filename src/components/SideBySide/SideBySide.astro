@@ -8,6 +8,8 @@ import { Picture } from "astro:assets";
 // Images
 import cabinets2 from "@assets/images/services/cabinets2.jpg";
 import construction from "@assets/images/services/construction.jpg";
+import washing1 from "@assets/images/hero/washing1.jpg";
+import washing2 from "@assets/images/hero/washing2.jpg";
 ---
 
 <section id="sbs">
@@ -15,7 +17,7 @@ import construction from "@assets/images/services/construction.jpg";
     <!-- Left Image Section -->
     <div class="cs-left">
       <Picture
-        src={cabinets2}
+        src={washing2}
         alt="cabinets"
         width={522}
         formats={["avif", "webp"]}
@@ -23,7 +25,7 @@ import construction from "@assets/images/services/construction.jpg";
         priority
       />
       <Picture
-        src={construction}
+        src={washing1}
         alt="house"
         width={390}
         formats={["avif", "webp"]}

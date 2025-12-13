@@ -9,18 +9,27 @@ import construction from "@assets/images/services/construction.jpg";
 import cabinets2 from "@assets/images/services/cabinets2.jpg";
 import image from "@assets/images/backgrounds/rainbow-vortex.png";
 import rippleBG from "@assets/SVGs/rainbow-vortex.svg";
+import beforeAfter from "@assets/images/gallery/main-b&a.jpeg";
 ---
 
 <section id="sbs-r">
   <div class="cs-container">
     <div class="cs-image-group">
-      <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source
+      <Picture
+        src={beforeAfter}
+        alt="test"
+        width="640"
+        formats={["avif", "webp"]}
+        pictureAttributes={{ class: "cs-picture" }}
+        priority
+      />
+      <!-- 1205x2281 pixels -->
+      <!--Mobile Image-->
+      <!-- <source
           media="(max-width: 600px)"
           srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg"
         />
-        <!--Tablet and above Image-->
+        Tablet and above Image
         <source
           media="(min-width: 601px)"
           srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg"
@@ -32,19 +41,7 @@ import rippleBG from "@assets/SVGs/rainbow-vortex.svg";
           alt="body builder"
           width="562"
           height="568"
-        />
-      </picture>
-      <picture class="cs-floater">
-        <img
-          class="cs-floater-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/weights.svg"
-          alt="icon"
-          width="59"
-          height="48"
-        />
-      </picture>
+        /> -->
     </div>
     <div class="cs-content">
       <span class="cs-topper">Why Clients Trust Us</span>
@@ -496,7 +493,7 @@ import rippleBG from "@assets/SVGs/rainbow-vortex.svg";
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
           display: block;
           position: absolute;
           top: 0;

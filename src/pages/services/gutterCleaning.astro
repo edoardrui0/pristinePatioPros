@@ -1,0 +1,979 @@
+---
+// Utils
+import { Picture, getImage } from "astro:assets";
+
+// Components
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Banner from "@components/Banner/Banner.astro";
+import SBS1 from "@components/ServicesPage/Layout2/SBS1.astro";
+import SBS2 from "@components/ServicesPage/SBS2.astro";
+import CTA from "@components/CTA/CTASimple.astro";
+
+// Images
+import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
+const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+---
+
+<BaseLayout
+	title="Gutter Cleaning in Jacksonville, FL | Pristine Patio Pros"
+	description="Gutters are intended to move water away from the home. When debris collects in these channels, water can overflow and run down siding or pool near the foundation. Gutter cleaning is used to remove this buildup so water can flow more freely."
+	heroImage={optimizedImage}
+>
+	<Banner title="Service 2" image={optimizedImage} />
+
+	<!-- SBS 1 -->
+	<section id="sbs-2283">
+		<div class="cs-container">
+			<div class="cs-image-group">
+				<!--Top left image-->
+				<picture class="cs-picture cs-picture1">
+					<!--Mobile Image-->
+					<source
+						media="(max-width: 600px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+					/>
+					<!--Tablet and above Image-->
+					<source
+						media="(min-width: 601px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+					/>
+					<img
+						loading="lazy"
+						decoding="async"
+						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+						alt="wedding photoshoot"
+						width="297"
+						height="366"
+					/>
+				</picture>
+				<!--Bottom right image-->
+				<picture class="cs-picture cs-picture2">
+					<!--Mobile Image-->
+					<source
+						media="(max-width: 600px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+					/>
+					<!--Tablet and above Image-->
+					<source
+						media="(min-width: 601px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+					/>
+					<img
+						loading="lazy"
+						decoding="async"
+						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+						alt="photograph of a woman"
+						width="405"
+						height="376"
+					/>
+				</picture>
+				<!--Middle image-->
+				<picture class="cs-picture cs-picture3">
+					<!--Mobile Image-->
+					<source
+						media="(max-width: 600px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+					/>
+					<!--Tablet and above Image-->
+					<source
+						media="(min-width: 601px)"
+						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+					/>
+					<img
+						loading="lazy"
+						decoding="async"
+						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+						alt="children's birthday"
+						width="218"
+						height="155"
+					/>
+				</picture>
+			</div>
+			<div class="cs-content">
+				<div class="cs-flex">
+					<h2 class="cs-title">Gutter Cleaning in Jacksonville, FL</h2>
+					<p class="cs-text">
+						Gutters are intended to move water away from the home. When debris
+						collects in these channels, water can overflow and run down siding
+						or pool near the foundation. Gutter cleaning is used to remove this
+						buildup so water can flow more freely.
+					</p>
+				</div>
+				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
+				<div class="cs-content-images">
+					<picture class="cs-picture cs-picture1">
+						<!--Mobile Image-->
+						<source
+							media="(max-width: 600px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+						/>
+						<!--Tablet and above Image-->
+						<source
+							media="(min-width: 601px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+						/>
+						<img
+							loading="lazy"
+							decoding="async"
+							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
+							alt="wedding photoshoot"
+							width="297"
+							height="366"
+						/>
+					</picture>
+					<picture class="cs-picture cs-picture3">
+						<!--Mobile Image-->
+						<source
+							media="(max-width: 600px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+						/>
+						<!--Tablet and above Image-->
+						<source
+							media="(min-width: 601px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+						/>
+						<img
+							loading="lazy"
+							decoding="async"
+							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
+							alt="children's birthday"
+							width="218"
+							height="155"
+						/>
+					</picture>
+				</div>
+			</div>
+			<ul class="cs-card-group">
+				<li class="cs-item">
+					<h3 class="cs-h3">What Gutter Cleaning Includes</h3>
+					<ul class="cs-ul">
+						<li class="cs-li">
+							Safe removal of leaves and debris from accessible gutters
+						</li>
+						<li class="cs-li">
+							Inspection of visible downspout entry points for blockages
+						</li>
+						<li class="cs-li">
+							Cleanup of debris from the immediate work area after service
+						</li>
+					</ul>
+				</li>
+				<li class="cs-item">
+					<h3 class="cs-h3">Why Gutter Cleaning Is Important</h3>
+					<ul class="cs-ul">
+						<li class="cs-li">
+							Supports proper drainage away from the home, helping keep things
+							clean
+						</li>
+						<li class="cs-li">
+							Reduces the chance of overflow onto walkways and landscaping
+						</li>
+						<li class="cs-li">
+							Helps limit unnecessary moisture exposure on siding and trim
+						</li>
+					</ul>
+				</li>
+				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
+				<li class="cs-item cs-item-picture">
+					<picture class="cs-picture cs-picture2">
+						<!--Mobile Image-->
+						<source
+							media="(max-width: 600px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+						/>
+						<!--Tablet and above Image-->
+						<source
+							media="(min-width: 601px)"
+							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+						/>
+						<img
+							loading="lazy"
+							decoding="async"
+							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
+							alt="photograph of a woman"
+							width="405"
+							height="376"
+						/>
+					</picture>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- SBS 2 -->
+	<div id="logos-1565">
+		<div class="cs-container">
+			<h1 class="logo-content">
+				Gutter cleaning is commonly scheduled during or after heavy leaf fall,
+				or any time water is seen overflowing from gutter runs during rain.
+			</h1>
+		</div>
+		<!-- Background Graphic -->
+		<picture class="cs-background">
+			<img
+				src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/waves-side.svg"
+				alt="waves"
+				width="1920"
+				height="300"
+				aria-hidden="true"
+				loading="lazy"
+				decoding="async"
+			/>
+		</picture>
+	</div>
+
+	<section id="sbs-1565">
+		<div class="cs-container">
+			<picture class="cs-picture">
+				<source
+					media="(max-width: 600px)"
+					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+				/>
+				<source
+					media="(min-width: 601px)"
+					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+				/>
+				<img
+					loading="lazy"
+					decoding="async"
+					src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
+					alt="model"
+					width="586"
+					height="752"
+					aria-hidden="true"
+				/>
+			</picture>
+			<div class="cs-content">
+				<span class="cs-topper">How gutter cleaning works</span>
+				<h2 class="cs-title">Gutter Cleaning Process</h2>
+				<ul class="cs-card-group">
+					<li class="cs-li">
+						<picture class="cs-li-picture">
+							<img
+								class="cs-li-icon"
+								aria-hidden="true"
+								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/price-tag.svg"
+								decoding="async"
+								alt="icon"
+								width="32"
+								height="32"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="cs-flex">
+							<h3 class="cs-h3">Assess Access and Safety</h3>
+							<p class="cs-li-text">
+								Access points to the gutters are checked and ladders or other
+								equipment are placed with stability and contact points in mind.
+								This step helps support a safer working setup before debris is
+								handled. Leaves, small branches, and built-up material are
+								removed from gutter channels by hand or with simple tools.
+								Debris is gathered in stages rather than pushed toward
+								downspouts so clogs are less likely to form deeper in the
+								system.
+							</p>
+						</div>
+					</li>
+					<li class="cs-li">
+						<picture class="cs-li-picture">
+							<img
+								class="cs-li-icon"
+								aria-hidden="true"
+								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/sheild.svg"
+								decoding="async"
+								alt="icon"
+								width="32"
+								height="32"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="cs-flex">
+							<h3 class="cs-h3">Flush Sections when Needed</h3>
+							<p class="cs-li-text">
+								When appropriate, sections of gutter are flushed with water to
+								see that channels are open and water can move toward the
+								downspouts. Any remaining obstructions at visible entry points
+								are cleared as they are found.
+							</p>
+						</div>
+					</li>
+					<li class="cs-li">
+						<picture class="cs-li-picture">
+							<img
+								class="cs-li-icon"
+								aria-hidden="true"
+								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
+								decoding="async"
+								alt="icon"
+								width="32"
+								height="32"
+								loading="lazy"
+							/>
+						</picture>
+						<div class="cs-flex">
+							<h3 class="cs-h3">Tidy the Ground Area</h3>
+							<p class="cs-li-text">
+								Debris that has fallen to walkways, driveways, or landscaping
+								during the cleaning is gathered from the immediate work area.
+								This leaves the property in a more orderly state and makes it
+								easier to see the completed work.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<CTA />
+</BaseLayout>
+
+<!-- SBS 1 Styles -->
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0rem) {
+		#sbs-2283 {
+			padding: var(--sectionPadding);
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+
+			.cs-container {
+				width: 100%;
+				/* changes to 1280px at desktop */
+				max-width: (584/16rem);
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				/* 48px - 64px */
+				gap: clamp(3rem, 6vw, 4rem);
+			}
+
+			.cs-content {
+				/* set text align to left if content needs to be left aligned */
+				text-align: left;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				/* centers content horizontally, set to flex-start to left align */
+				align-items: flex-start;
+			}
+
+			.cs-content-images {
+				display: none;
+			}
+
+			.cs-text {
+				max-width: 100%;
+				margin-bottom: (16/16rem);
+				&:last-of-type {
+					margin: 0;
+				}
+			}
+
+			.cs-card-group {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: (20/16rem);
+				order: 3;
+			}
+
+			.cs-item {
+				list-style: none;
+				/* 24px - 32px */
+				padding: clamp(1.5rem, 5vw, 2rem);
+				border-left: 4px solid var(--primary);
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: (12/16rem);
+				position: relative;
+				z-index: 1;
+
+				&:before {
+					content: "";
+					width: 100%;
+					height: 100%;
+					background: var(--primary);
+					opacity: 0.05;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+
+			.cs-ul {
+				margin: (16/16rem) 0 (8/16rem);
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: (12/16rem);
+			}
+
+			.cs-li {
+				font-size: (16/16rem);
+				line-height: 1.5em;
+				list-style: none;
+				color: var(--bodyTextColor);
+
+				&:before {
+					/* bullet */
+					content: "";
+					width: (8/16rem);
+					height: (8/16rem);
+					margin: 0 (12/16rem) (2/16rem) (2/16rem);
+					background: var(--secondary);
+					display: inline-block;
+					transform: rotate(45deg);
+				}
+			}
+
+			.cs-item-picture {
+				display: none;
+			}
+
+			.cs-h3 {
+				font-size: (16/16rem);
+				line-height: 1.2em;
+				font-weight: 700;
+				margin: 0;
+				color: var(--headerColor);
+			}
+
+			.cs-item-text {
+				font-size: (16/16rem);
+				line-height: 1.5em;
+				margin: 0;
+				color: var(--bodyTextColor);
+			}
+
+			.cs-button-solid {
+				font-size: (16/16rem);
+				font-weight: 700;
+				/* 46px - 56px */
+				line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+				text-align: center;
+				text-decoration: none;
+				min-width: (150/16rem);
+				margin: 0;
+				/* prevents padding from adding to the width */
+				box-sizing: border-box;
+				padding: 0 (24/16rem);
+				background-color: var(--primary);
+				color: #fff;
+				display: inline-block;
+				position: relative;
+				z-index: 1;
+
+				&:before {
+					content: "";
+					width: 0%;
+					height: 100%;
+					background: #000;
+					opacity: 1;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+					transition: width 0.3s;
+				}
+
+				&:hover {
+					&:before {
+						width: 100%;
+					}
+				}
+			}
+
+			.cs-image-group {
+				/* scales the whole group based on the view width size and stop when that vales equals .74em, resets at desktop */
+				font-size: ~"min(2.48vw, 1rem)";
+				width: (584/16em);
+				height: (619/16em);
+				display: block;
+				position: relative;
+				z-index: 1;
+				order: 2;
+			}
+
+			.cs-picture {
+				display: block;
+				position: absolute;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+			}
+
+			.cs-picture1 {
+				width: (381/16em);
+				height: (381/16em);
+				border-right: (14/16em) solid #fef5f4;
+				border-bottom: (14/16em) solid #fef5f4;
+				top: 0;
+				bottom: (281/16em);
+				left: 0;
+			}
+
+			.cs-picture2 {
+				width: (382/16em);
+				height: (326/16em);
+				right: 0;
+				bottom: 0;
+				z-index: -1;
+			}
+
+			.cs-picture3 {
+				width: (215/16em);
+				height: (152/16em);
+				bottom: (160/16em);
+				left: (100/16em);
+			}
+		}
+	}
+
+	/* Small Desktop - 1024px */
+	@media only screen and (min-width: 64rem) {
+		#sbs-2283 {
+			.cs-container {
+				max-width: (1280/16rem);
+				gap: (32/16rem);
+			}
+
+			.cs-content {
+				width: 100%;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: stretch;
+				gap: (44/16rem);
+				position: relative;
+				z-index: 10;
+			}
+
+			.cs-flex {
+				width: 100%;
+				max-width: (738/16rem);
+			}
+
+			.cs-content-images {
+				width: 45vw;
+				max-width: (412/16rem);
+				height: auto;
+				display: block;
+				position: relative;
+				z-index: 1;
+				order: -1;
+			}
+
+			.cs-li {
+				align-items: center;
+			}
+
+			.cs-image-group {
+				display: none;
+			}
+
+			.cs-picture1 {
+				width: 100%;
+				/* -133px to -165px */
+				height: calc(100% + clamp(8.3125rem, 13vw, 10.3125rem));
+				top: 0;
+			}
+
+			.cs-picture3 {
+				width: 56%;
+				min-height: 100px;
+				max-width: (233/16rem);
+				left: 50%;
+				top: calc(100% + 5rem);
+				transform: translateX(-50%);
+
+				img {
+					width: 100%;
+					height: auto;
+					position: relative;
+					z-index: 1;
+					top: auto;
+					left: auto;
+					object-fit: initial;
+				}
+			}
+
+			.cs-card-group {
+				width: 50%;
+				max-width: (521/16rem);
+				margin-left: auto;
+				position: relative;
+				z-index: 1;
+			}
+
+			.cs-item-picture {
+				width: 30vw;
+				max-width: (413/16rem);
+				border: none;
+				display: block;
+				position: absolute;
+				/* 72px - 130px */
+				right: calc(100% + clamp(4.5rem, 6vw + 2.5rem, 8.125rem));
+				top: (36/16rem);
+				bottom: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+
+			.cs-picture2 {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0rem) {
+		body.dark-mode {
+			#sbs-2283 {
+				background-color: rgba(0, 0, 0, 0.2);
+
+				.cs-title,
+				.cs-text,
+				.cs-h3,
+				.cs-item-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-text,
+				.cs-li-text {
+					opacity: 0.8;
+				}
+
+				.cs-picture1 {
+					border-color: var(--accent);
+				}
+			}
+		}
+	}
+</style>
+
+<!-- SBS 2 Styles -->
+<style lang="less">
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0rem) {
+		#sbs-1565 {
+			padding: var(--sectionPadding);
+			position: relative;
+			z-index: 2;
+
+			.cs-container {
+				width: 100%;
+				/* changes to 1280px at desktop */
+				max-width: (550/16rem);
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				/* 48px - 64px */
+				gap: clamp(3rem, 6vw, 4rem);
+				position: relative;
+			}
+
+			.cs-content {
+				/* set text align to left if content needs to be left aligned */
+				text-align: left;
+				width: 100%;
+				max-width: (630/16rem);
+				display: flex;
+				flex-direction: column;
+				/* centers content horizontally, set to flex-start to left align */
+				align-items: flex-start;
+			}
+
+			.cs-title {
+				/* 28px - 40px */
+				margin: 0 0 clamp(1.75rem, 3vw, 2.5rem) 0;
+			}
+
+			.cs-text {
+				margin-bottom: (16/16rem);
+				&:last-of-type {
+					margin-bottom: (32/16rem);
+				}
+			}
+
+			.cs-card-group {
+				width: 100%;
+				max-width: (630/16rem);
+				margin: 0;
+				padding: 0;
+				display: flex;
+				align-items: flex-start;
+				flex-direction: column;
+				/* 28px - 40px */
+				gap: clamp(1.75rem, 4vw, 2.5rem);
+			}
+
+			.cs-li {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				align-items: flex-start;
+				justify-content: flex-start;
+				/* 16px - 20px */
+				gap: clamp(1rem, 2.5vw, 1.25rem);
+			}
+
+			.cs-li-picture {
+				/* 60px - 80px */
+				width: clamp(3.75rem, 7vw, 5rem);
+				height: clamp(3.75rem, 7vw, 5rem);
+				margin: 0;
+				border-radius: 50%;
+				background-color: #fff;
+				border: 1px solid var(--primary);
+				box-sizing: border-box;
+				overflow: hidden;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				/* prevents flexbox from squishing it */
+				flex: none;
+				position: relative;
+				z-index: 1;
+
+				&:before {
+					content: "";
+					width: 100%;
+					height: 100%;
+					background: var(--primary);
+					opacity: 0.1;
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+
+			.cs-li-icon {
+				/* 24px 36px */
+				width: clamp(1.5rem, 3vw, 2.25rem);
+				height: auto;
+				display: block;
+			}
+
+			.cs-h3 {
+				font-size: (20/16rem);
+				line-height: 1.2em;
+				font-weight: 700;
+				text-align: left;
+				margin: 0 0 (8/16rem) 0;
+				color: var(--headerColor);
+			}
+
+			.cs-li-text {
+				font-size: (16/16rem);
+				line-height: 1.5em;
+				text-align: left;
+				margin: 0;
+				color: var(--bodyTextColor);
+			}
+
+			.cs-picture {
+				width: 100%;
+				max-width: (586/16rem);
+				height: 100vw;
+				min-height: (360/16rem);
+				max-height: (600/16rem);
+				display: block;
+				position: relative;
+				z-index: 1;
+
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	/* Tablet - 768px */
+	@media only screen and (min-width: 48rem) {
+		#sbs-1565 {
+			// padding-bottom: 0;
+
+			.cs-container {
+				max-width: (1280/16rem);
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: stretch;
+				position: relative;
+			}
+
+			.cs-content {
+				width: 50%;
+				/* Same as marign-bottom on .cs-picture, offsets its negative margin */
+				padding-bottom: clamp(5rem, 7vw, 7rem);
+			}
+
+			.cs-picture {
+				height: auto;
+				/* 640px - 752px */
+				min-height: clamp(40rem, 70vw, 47rem);
+				max-height: 100%;
+				width: 42%;
+				/* -80px to -112px */
+				// margin-bottom: ~"calc(clamp(5rem, 7vw, 7rem)*-1)";
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0rem) {
+		body.dark-mode {
+			#sbs-1565 {
+				.cs-title,
+				.cs-text,
+				.cs-li,
+				.cs-h3,
+				.cs-li-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-li-text,
+				.cs-text {
+					opacity: 0.8;
+				}
+
+				.cs-li-icon {
+					filter: grayscale(1) brightness(1000%);
+				}
+
+				.cs-li-picture {
+					background-color: var(--dark);
+				}
+			}
+		}
+	}
+
+	/*-- -------------------------- -->
+<---           Logos            -->
+<--- -------------------------- -*/
+
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0rem) {
+		#logos-1565 {
+			padding: var(--sectionPadding);
+			background-color: #1a1a1a;
+			position: relative;
+			z-index: 1;
+
+			.cs-container {
+				width: 100%;
+				max-width: (1280/16rem);
+				margin: auto;
+			}
+
+			.cs-header {
+				font-size: (25/16rem);
+				text-align: center;
+				font-weight: 700;
+				line-height: 1.2em;
+				margin: 0;
+				color: var(--bodyTextColorWhite);
+				display: block;
+			}
+
+			.cs-logo-group {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				column-gap: (40/16rem);
+			}
+
+			.cs-picture {
+				/* 120px - 196px */
+				width: clamp(7.5rem, 12vw, 12.25rem);
+				/* 72px - 134px */
+				height: clamp(4.5rem, 12vw, 8.375rem);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.cs-logo {
+				width: 100%;
+				height: auto;
+				height: auto;
+				margin: 0;
+				display: block;
+				object-fit: contain;
+			}
+
+			.logo-content {
+				color: white;
+			}
+
+			.cs-background {
+				width: 100%;
+				height: 100%;
+				max-height: (650/16rem);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: -1;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	/* Tablet - 768px */
+	@media only screen and (min-width: 48rem) {
+		#logos-1565 {
+			/* 170px - 192px */
+			// padding-top: clamp(10.625rem, 17vw, 12rem);
+			.cs-logo-group {
+				justify-content: space-between;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 48rem) {
+		body.dark-mode {
+			#logos-1565 {
+				background-color: rgba(0, 0, 0, 0.6);
+
+				.cs-background {
+					img {
+						opacity: 0.35;
+					}
+				}
+			}
+		}
+	}
+</style>

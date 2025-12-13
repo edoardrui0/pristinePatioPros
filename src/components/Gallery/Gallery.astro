@@ -6,6 +6,12 @@ import { Picture } from "astro:assets";
 
 // Images
 import linesBG from "@assets/SVGs/Curve-Line.svg";
+import DrivewayIMG from "@assets/images/gallery/hero-gallery/driveway.jpg";
+import PatioIMG from "@assets/images/gallery/hero-gallery/patio.jpg";
+import SoftWashIMG from "@assets/images/gallery/hero-gallery/soft-wash.jpg";
+import FenceIMG from "@assets/images/gallery/hero-gallery/fence-wash.jpg";
+import GutterIMG from "@assets/images/gallery/hero-gallery/gutter-cleaning.jpg";
+import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
 ---
 
 <section id="gallery-380">
@@ -22,7 +28,7 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
       </p>
     </div>
     <div class="cs-gallery">
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/drivewayWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -36,26 +42,16 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">Driveway Pressure Washing</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery1.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={DrivewayIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/patioWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -69,26 +65,16 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">Patio Pressure Washing</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery2.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={PatioIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/softWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -102,26 +88,16 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">House Soft Washing</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery3.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={SoftWashIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/fenceWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -135,26 +111,16 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">Fence Washing</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery4.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={FenceIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/gutterCleaning/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -168,26 +134,16 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">Gutter Cleaning</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery5.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={GutterIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
-      <a class="cs-item" href="">
+      <a class="cs-item" href="/services/windowCleaning/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
             <img
@@ -201,24 +157,14 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
           </picture>
           <h3 class="cs-h3">Window Cleaning</h3>
         </div>
-        <picture class="cs-image">
-          <source
-            media="(max-width: 600px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg"
-          />
-          <source
-            media="(min-width: 601px)"
-            srcset="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg"
-          />
-          <img
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/gallery6.jpg"
-            alt="gallery"
-            width="305"
-            height="400"
-          />
-        </picture>
+        <Picture
+          src={WindowIMG}
+          alt="test"
+          width={305}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-image" }}
+          priority
+        />
       </a>
     </div>
   </div>
@@ -331,10 +277,6 @@ import linesBG from "@assets/SVGs/Curve-Line.svg";
 </section> -->
 
 <style lang="less">
-  /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
   /* Mobile - 360px */
   @media only screen and (min-width: 0rem) {
     #gallery-380 {

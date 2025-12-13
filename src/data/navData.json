@@ -10,32 +10,37 @@
     "children": []
   },
   {
+    "key": "Gallery",
+    "url": "/gallery/",
+    "children": []
+  },
+  {
     "key": "Services",
     "url": "/services/",
     "children": [
       {
-        "key": "Services 1",
-        "url": "/services/service-1/"
+        "key": "Driveway Pressure Washing",
+        "url": "/services/drivewayWash/"
       },
       {
-        "key": "Services 2",
-        "url": "/services/service-2/"
+        "key": "Patio Pressure Washing",
+        "url": "/services/patioWash/"
       },
       {
-        "key": "Services 3",
-        "url": "/services/service-3/"
+        "key": "House Soft Washing",
+        "url": "/services/softWash/"
       },
       {
-        "key": "Services 4",
-        "url": "/services/service-4/"
+        "key": "Fence Wash",
+        "url": "/services/fenceWash/"
       },
       {
-        "key": "Services 5",
-        "url": "/services/service-5/"
+        "key": "Gutter Cleaning",
+        "url": "/services/gutterCleaning/"
       },
       {
-        "key": "Services 6",
-        "url": "/services/service-6/"
+        "key": "Window Cleaning",
+        "url": "/services/windowCleaning/"
       }
     ]
   },

@@ -1,0 +1,286 @@
+---
+import { Picture } from "astro:assets";
+
+import before1 from "@assets/images/gallery/1-before.jpeg";
+import after1 from "@assets/images/gallery/1-after.jpeg";
+import before2 from "@assets/images/gallery/2-before.jpeg";
+import after2 from "@assets/images/gallery/2-after.jpeg";
+import before3 from "@assets/images/gallery/3-before.jpeg";
+import after3 from "@assets/images/gallery/3-after.jpeg";
+import before4 from "@assets/images/gallery/4-before.jpeg";
+import after4 from "@assets/images/gallery/4-after.jpeg";
+---
+
+<section id="gallery-45">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Gallery</span>
+      <h2 class="cs-title">Before and Afters</h2>
+    </div>
+    <ul class="cs-image-group">
+      <!-- Image 1 -->
+      <li class="cs-item">
+        <Picture
+          src={before1}
+          alt="pathway before pressure wash"
+          width={346}
+          formats={["avif", "webp"]}
+          pictureAttributes={{ class: "cs-picture" }}
+          priority
+        />
+        <!-- Image 2 -->
+        <li class="cs-item">
+          <Picture
+            src={after1}
+            alt="pathway after pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 3 -->
+        <li class="cs-item">
+          <Picture
+            src={before2}
+            alt="backyard pavers before pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 4 -->
+        <li class="cs-item">
+          <Picture
+            src={after2}
+            alt="backyard pavers after pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 5 -->
+        <li class="cs-item">
+          <Picture
+            src={before3}
+            alt="front pathway before pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 6 -->
+        <li class="cs-item">
+          <Picture
+            src={after3}
+            alt="front pathway after pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 7 -->
+        <li class="cs-item">
+          <Picture
+            src={before4}
+            alt="siding before pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+        <!-- Image 8 -->
+        <li class="cs-item">
+          <Picture
+            src={before4}
+            alt="siding before pressure wash"
+            width={346}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
+        </li>
+      </li>
+    </ul>
+    <a href="/contact" class="cs-button-solid">Contact Us!</a>
+  </div>
+
+  <style lang="less">
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+      #gallery-45 {
+        padding: var(--sectionPadding);
+        position: relative;
+        /* Prevents overflow from the image going off screen */
+        overflow: hidden;
+
+        .cs-container {
+          width: 100%;
+          max-width: (1280/16rem);
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* 48px - 64px */
+          gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+          /* set text align to left if content needs to be left aligned */
+          text-align: center;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          /* centers content horizontally, set to flex-start to left align */
+          align-items: center;
+        }
+
+        .cs-image-group {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* 16px - 20px */
+          gap: clamp(1rem, 1.5vw, 1.25rem);
+        }
+
+        .cs-item {
+          list-style: none;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 1;
+          margin: 0;
+          position: relative;
+          display: block;
+
+          &:hover {
+            .cs-hover-box {
+              opacity: 1;
+            }
+
+            .cs-icon {
+              /* return to original position */
+              transform: rotateY(0);
+            }
+
+            .cs-h3 {
+              opacity: 1;
+              /* Return to original position */
+              transform: translateY(0);
+            }
+
+            .cs-hover-box-text {
+              opacity: 1;
+              /* Return to original position */
+              transform: translateY(0);
+            }
+          }
+        }
+
+        .cs-picture {
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: relative;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .cs-button-solid {
+          font-size: (16/16rem);
+          /* 46px - 56px */
+          line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+          text-decoration: none;
+          font-weight: 700;
+          text-align: center;
+          margin: 0;
+          color: #fff;
+          min-width: (150/16rem);
+          padding: 0 (24/16rem);
+          background-color: var(--primary);
+          border-radius: (4/16rem);
+          display: inline-block;
+          position: relative;
+          z-index: 1;
+          /* prevents padding from adding to the width */
+          box-sizing: border-box;
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: #000;
+            opacity: 1;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            border-radius: (4/16rem);
+            transition: width 0.3s;
+          }
+
+          &:hover {
+            &:before {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    /* In Between - 600px */
+    @media only screen and (min-width: 37.5rem) {
+      #gallery-45 {
+        .cs-image-group {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: 1fr;
+        }
+
+        .cs-item {
+          grid-column: span 6;
+        }
+      }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48rem) {
+      #gallery-45 {
+        .cs-item {
+          grid-column: span 3;
+        }
+      }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+      body.dark-mode {
+        #gallery-45 {
+          .cs-title,
+          .cs-text {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-text {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  </style>
+</section>

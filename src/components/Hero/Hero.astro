@@ -58,7 +58,7 @@ const { image } = Astro.props as Props;
       /* Centers button */
       text-align: center;
       /* changes on tablet */
-      padding: clamp(9rem, 25.95vw, 17.5rem) (16/16rem);
+      padding: clamp(13rem, 25.95vw, 17.5rem) (16/16rem);
       /* 150px - 250px */
       padding-bottom: clamp(9.375rem, 30.5vw, 15.625rem);
       position: relative;
@@ -278,7 +278,7 @@ const { image } = Astro.props as Props;
     #hero-331 {
       .cs-background {
         &:before {
-          width: 80%;
+          width: 100%;
           background: -moz-linear-gradient(
             left,
             rgba(247, 247, 247, 1) 47%,
@@ -291,14 +291,9 @@ const { image } = Astro.props as Props;
             rgba(249, 249, 249, 1) 59%,
             rgba(255, 255, 255, 0) 100%
           );
-          background: linear-gradient(
-            to right,
-            #76a9ea 30%,
-            #accbf3 50%,
-            rgba(255, 255, 255, 0) 100%
-          );
+          background: linear-gradient(to top, #76a9ea 10%, #accbf3 20%, #fff0);
 
-          opacity: 1;
+          opacity: 0.95;
         }
       }
     }

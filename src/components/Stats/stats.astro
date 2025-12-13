@@ -1,3 +1,9 @@
+---
+import { Picture } from "astro:assets";
+
+import stats from "@assets/images/hero/stats.jpg";
+---
+
 <div id="stats-340">
   <ul class="cs-card-group">
     <li class="cs-item">
@@ -56,25 +62,14 @@
     </li>
   </ul>
   <!--Background Image-->
-  <picture class="cs-background">
-    <source
-      media="(max-width: 600px)"
-      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products-m.jpg"
-    />
-    <source
-      media="(min-width: 601px)"
-      srcset="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products.jpg"
-    />
-    <img
-      aria-hidden="true"
-      loading="lazy"
-      decoding="async"
-      src="https://csimg.nyc3.digitaloceanspaces.com/Stats/cleaning-products.jpg"
-      alt="cleaning products"
-      width="1920"
-      height="283"
-    />
-  </picture>
+  <Picture
+    src={stats}
+    alt="cabinets"
+    width={1920}
+    height={283}
+    formats={["avif", "webp"]}
+    pictureAttributes={{ class: "cs-background" }}
+  />
 </div>
 
 <style lang="less">
