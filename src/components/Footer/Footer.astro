@@ -7,22 +7,32 @@ import { getCurrentYear } from "@js/utils";
 import { BUSINESS } from "@data/client";
 import navData from "@data/navData.json";
 
+import Logo from "@assets/images/PPP_wordmarkDark.png";
+
 const currentYear = getCurrentYear();
 ---
 
 <footer id="footer">
 	<div class="container">
 		<div class="left-section">
-			<a class="logo" href="/" aria-label="Return to [Company Name] Home page">
-				<Icon name="logo-white" width="264" height="78" />
+			<a class="logo" href="/" aria-label="Return to Home page">
+				<img
+					class="cs-default"
+					src={Logo.src}
+					alt="logo"
+					width="210"
+					height="29"
+					aria-hidden="true"
+					decoding="async"
+				/>
+				<!-- <Icon name="logo-white" width="264" height="78" /> -->
 			</a>
-			<p>Extra content if you need it, if not you can delete this whole p tag. I usually do.</p>
 		</div>
 		<div class="right-section">
 			<div class="lists">
 				<ul>
 					<li>
-						<h2>Information</h2>
+						<h2>Links</h2>
 					</li>
 					{
 						navData.map((entry) => (
@@ -36,10 +46,14 @@ const currentYear = getCurrentYear();
 					<li>
 						<h2>Services</h2>
 					</li>
-					<li>Service1</li>
-					<li>Service2</li>
-					<li>Service4</li>
-					<li>Service5</li>
+					<li>
+						<a href="/services/drivewayWash/">Driveway Pressure Washing</a>
+					</li>
+					<li><a href="/services/patioWash">Patio Pressure Washing</a></li>
+					<li><a href="/services/softWash">House Soft Washing</a></li>
+					<li><a href="/services/fenceWash">Fence Washing</a></li>
+					<li><a href="/services/gutterCleaning">Gutter Cleaning</a></li>
+					<li><a href="/services/windowCleaning">Window Cleaning</a></li>
 				</ul>
 				<ul>
 					<li>
@@ -48,7 +62,6 @@ const currentYear = getCurrentYear();
 					<li>
 						<a href="/contact/">
 							{BUSINESS.address.lineOne}<br />
-							{BUSINESS.address.lineTwo}<br />
 							{BUSINESS.address.city}
 							{BUSINESS.address.state}
 							{BUSINESS.address.zip}
@@ -90,7 +103,7 @@ const currentYear = getCurrentYear();
 				.logo {
 					text-align: center;
 					width: auto;
-					height: (32/16em);
+					height: (72/16em);
 					margin: auto;
 					margin-bottom: (30/16em);
 					display: inline-block;
@@ -172,7 +185,7 @@ const currentYear = getCurrentYear();
 
 							&:before {
 								content: "";
-								width: (97/16rem);
+								width: (84/16rem);
 								height: (2/16rem);
 								background: var(--primary);
 								opacity: 1;
@@ -247,7 +260,7 @@ const currentYear = getCurrentYear();
 
 				.logo {
 					text-align: left;
-					height: (40/16rem);
+					height: (64/16rem);
 					margin-left: 0;
 				}
 

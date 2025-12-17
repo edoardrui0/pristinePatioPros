@@ -1,31 +1,31 @@
 // ===== SITE CONSTANTS =====
 export const SITE = {
-	title: "Code Stitch Web Designs",
-	tagline: "Professional Web Design Services",
+	title: "Pristine Patio Pros LLC",
+	tagline: "Professional Pressure Washing in Jacksonville, FL",
 	description: "Code Stitch Web Designs offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
 	url: "https://www.yourwebsite.com",
-	author: "Code Stitch Team",
+	author: "Bay Breeze Web Studio",
 	locale: "en",
 };
 
 // ===== BUSINESS INFO =====
 export const BUSINESS = {
 	name: SITE.title,
-	email: "help@codestitch.app",
-	phoneForTel: "555-779-4407",
-	phoneFormatted: "(555) 779-4407",
+	email: "pristinepatiopros904@gmail.com",
+	phoneForTel: "904-901-0374",
+	phoneFormatted: "(904) 901-0374",
 	logo: "/assets/favicons/favicon.svg",
 	address: {
-		lineOne: "First Address Line",
+		lineOne: "12281 Mandarin Rd",
 		lineTwo: "Second Address Line",
-		city: "Denver",
-		state: "CO",
-		zip: "80206",
-		mapLink: "https://goo.gl/maps/UAQn4vuGDiwv7DV39",
+		city: "Jacksonville",
+		state: "FL",
+		zip: "32223",
+		mapLink: "https://maps.app.goo.gl/ZuSmBRc4CBFh7Shq9",
 	},
 	socials: {
-		facebook: "https://www.facebook.com/",
-		instagram: "https://www.instagram.com/",
+		facebook: "https://www.facebook.com/share/1F8t4dMa7M/",
+		instagram: "https://www.instagram.com/pristine_patio_pros?igsh=djdjcmw4c3h3eXRj",
 	},
 };
 

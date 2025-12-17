@@ -23,6 +23,9 @@ import navData from "@data/navData.json";
 
 // Images
 import Logo from "@assets/images/pristineLogo.png";
+import DarkLogo from "@assets/images/pristineLogoDark.png";
+import LogoMobile from "@assets/images/PPP_wordmark.png";
+import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
 ---
 
 <!-- Navigation -->
@@ -39,16 +42,18 @@ import Logo from "@assets/images/pristineLogo.png";
         height="29"
         aria-hidden="true"
         decoding="async"
+        loading="eager"
       />
       <!--Dark Mode Logo-->
       <img
-        class="cs-dark"
-        src={Logo.src}
+        class="cs-dark-2"
+        src={DarkLogo.src}
         alt="logo"
         width="210"
         height="29"
         aria-hidden="true"
         decoding="async"
+        loading="eager"
       />
     </div>
   </a>
@@ -56,7 +61,10 @@ import Logo from "@assets/images/pristineLogo.png";
     <!--Top Bar-->
     <div class="cs-top-bar">
       <div class="cs-top-social">
-        <a href="" class="cs-social-link">
+        <a
+          href="https://www.facebook.com/share/1F8t4dMa7M/"
+          class="cs-social-link"
+        >
           <img
             class="cs-social-icon"
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-1a.svg"
@@ -67,32 +75,14 @@ import Logo from "@assets/images/pristineLogo.png";
             decoding="async"
           />
         </a>
-        <a href="" class="cs-social-link">
-          <img
-            class="cs-social-icon"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
-            alt="logo"
-            width="12"
-            height="12"
-            aria-hidden="true"
-            decoding="async"
-          />
-        </a>
-        <a href="" class="cs-social-link">
+
+        <a
+          href="https://www.instagram.com/pristine_patio_pros?igsh=djdjcmw4c3h3eXRj"
+          class="cs-social-link"
+        >
           <img
             class="cs-social-icon"
             src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
-            alt="logo"
-            width="12"
-            height="12"
-            aria-hidden="true"
-            decoding="async"
-          />
-        </a>
-        <a href="" class="cs-social-link">
-          <img
-            class="cs-social-icon"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
             alt="logo"
             width="12"
             height="12"
@@ -134,22 +124,24 @@ import Logo from "@assets/images/pristineLogo.png";
           <!--Default Logo-->
           <img
             class="cs-default"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/construction-logo.svg"
+            src={LogoMobile.src}
             alt="logo"
             width="210"
             height="29"
             aria-hidden="true"
             decoding="async"
+            loading="eager"
           />
           <!--Dark Mode Logo-->
           <img
             class="cs-dark"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Logos/construction-logo-white2.svg"
+            src={LogoMobileDark.src}
             alt="logo"
             width="210"
             height="29"
             aria-hidden="true"
             decoding="async"
+            loading="eager"
           />
         </div>
       </a>
@@ -1403,7 +1395,7 @@ import Logo from "@assets/images/pristineLogo.png";
         backface-visibility: hidden;
       }
 
-      .cs-dark {
+      .cs-dark-2 {
         position: absolute;
         top: 0;
         left: 50%;
@@ -1716,7 +1708,7 @@ import Logo from "@assets/images/pristineLogo.png";
           opacity: 0;
         }
 
-        .cs-dark {
+        .cs-dark-2 {
           transform: rotateX(360deg) translateX(-50%);
           opacity: 1;
         }
