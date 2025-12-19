@@ -83,12 +83,12 @@ const { image } = Astro.props as Props;
           width: 100%;
           height: 100%;
           background: linear-gradient(
-            to top,
-            #76a9ea 30%,
-            #accbf3 50%,
+            to right,
+            #76a9ea 15%,
+            #accbf3d1 42%,
             rgba(255, 255, 255, 0) 100%
           );
-          opacity: 0.85;
+          opacity: 1;
           position: absolute;
           display: block;
           top: 0;
@@ -292,9 +292,14 @@ const { image } = Astro.props as Props;
             rgba(249, 249, 249, 1) 59%,
             rgba(255, 255, 255, 0) 100%
           );
-          background: linear-gradient(to top, #76a9ea 10%, #accbf3 20%, #fff0);
+          background: linear-gradient(
+            to right,
+            #76a9ea 15%,
+            #accbf3bd 42%,
+            rgba(255, 255, 255, 0) 100%
+          );
 
-          opacity: 0.95;
+          opacity: 1;
         }
       }
     }
@@ -322,8 +327,8 @@ const { image } = Astro.props as Props;
             );
             background: linear-gradient(
               to right,
-              rgba(0, 0, 0, 1) 21%,
-              rgba(0, 0, 0, 0.67) 47%,
+              #000000 15%,
+              rgb(0 0 0 / 39%) 42%,
               rgba(255, 255, 255, 0) 100%
             );
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 );
@@ -340,6 +345,9 @@ const { image } = Astro.props as Props;
         .cs-text {
           color: var(--bodyTextColorWhite);
           opacity: 0.8;
+        }
+        .cs-button-solid {
+          background-color: var(--medium);
         }
       }
     }

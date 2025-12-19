@@ -426,6 +426,8 @@
   @media only screen and (min-width: 0rem) {
     body.dark-mode {
       #sbs-2277 {
+        background-color: #053a7d;
+
         .cs-title,
         .cs-text,
         .cs-item-text {
@@ -459,11 +461,15 @@
           }
 
           &:last-of-type {
-            background-color: var(--primary);
+            background-color: var(--medium);
             &::before {
               display: none;
             }
           }
+        }
+
+        .cs-button-solid {
+          background-color: var(--medium);
         }
       }
     }
