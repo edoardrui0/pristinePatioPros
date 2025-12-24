@@ -5,13 +5,15 @@ import { Picture, getImage } from "astro:assets";
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import SBS1 from "@components/ServicesPage/Layout1/SBS1.astro";
-import SBS2 from "@components/ServicesPage/SBS2.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
 import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+
+import DrivewayIMG1 from "@assets/images/services/driveway1.jpeg";
+import DrivewayIMG2 from "@assets/images/services/driveway2.jpeg";
+import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 ---
 
 <BaseLayout
@@ -19,32 +21,19 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	description="Driveways are often the first surface noticed when approaching a property. In Jacksonville’s climate, concrete and other driveway materials collect dirt, tire marks, mildew, and organic growth. Driveway pressure washing is used to remove this buildup and restore a more even, clean appearance."
 	heroImage={optimizedImage}
 >
-	<Banner title="Service 1" image={optimizedImage} />
+	<Banner title="Driveway Pressure Washing" image={optimizedImage} />
 
 	<!-- SBS 1 -->
 	<section id="sbs-2316">
 		<div class="cs-container">
 			<div class="cs-content cs-content1">
-				<picture class="cs-picture cs-picture1">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-						alt="people"
-						width="608"
-						height="406"
-					/>
-				</picture>
+				<Picture
+					src={DrivewayIMG1}
+					alt="concrete driveway being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture1" }}
+				/>
 				<div class="cs-wrapper cs-wrapper1">
 					<h1 class="cs-title">
 						Driveway Pressure Washing in Jacksonville, FL
@@ -71,26 +60,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				</div>
 			</div>
 			<div class="cs-content cs-content2">
-				<picture class="cs-picture cs-picture2">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-						alt="people"
-						width="608"
-						height="406"
-					/>
-				</picture>
+				<Picture
+					src={DrivewayIMG2}
+					alt="paver driveway being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture2" }}
+				/>
 				<div class="cs-wrapper cs-wrapper2">
 					<ul class="cs-ul">
 						<strong>Benefits of Driveway Cleaning</strong>
@@ -129,25 +105,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 
 	<section id="sbs-1565">
 		<div class="cs-container">
-			<picture class="cs-picture">
-				<source
-					media="(max-width: 600px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<img
-					loading="lazy"
-					decoding="async"
-					src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-					alt="model"
-					width="586"
-					height="752"
-					aria-hidden="true"
-				/>
-			</picture>
+			<Picture
+				src={DrivewayIMG3}
+				alt="concrete driveway being pressured washed"
+				width={586}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture" }}
+			/>
 			<div class="cs-content">
 				<span class="cs-topper">How driveway cleaning works</span>
 				<h2 class="cs-title">Driveway Cleaning Process</h2>
@@ -198,7 +162,9 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 								Pressure levels, spray tips, and cleaning solutions are selected
 								according to the driveway material and visible buildup. A
 								cleaner may be applied to help break down organic growth, tire
-								marks, and general staining before the main rinse begins.
+								marks, and general staining before the main rinse begins. This
+								service is not intended for oil stains, rust, or tine shine
+								removal, and does not include landscape curbing.
 							</p>
 						</div>
 					</li>

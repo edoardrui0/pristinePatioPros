@@ -1,3 +1,9 @@
+---
+import { Picture } from "astro:assets";
+
+import WashIMG from "@assets/images/about/washIMG.jpeg";
+---
+
 <section id="sbs-2277">
   <div class="cs-container">
     <div class="cs-content">
@@ -109,25 +115,15 @@
               </span>
             </li>
           </ul>
-          <picture class="cs-picture">
-            <source
-              media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction6.jpg"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction6.jpg"
-            />
-            <img
-              aria-hidden="true"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction6.jpg"
-              alt="construction site"
-              width="755"
-              height="491"
-              loading="lazy"
-            />
-          </picture>
+          <Picture
+            src={WashIMG}
+            alt="pathway before pressure wash"
+            width={755}
+            quality={85}
+            formats={["avif", "webp"]}
+            pictureAttributes={{ class: "cs-picture" }}
+            priority
+          />
         </div>
       </div>
     </div>
@@ -426,6 +422,8 @@
   @media only screen and (min-width: 0rem) {
     body.dark-mode {
       #sbs-2277 {
+        background-color: #053a7d;
+
         .cs-title,
         .cs-text,
         .cs-item-text {
@@ -459,11 +457,15 @@
           }
 
           &:last-of-type {
-            background-color: var(--primary);
+            background-color: var(--medium);
             &::before {
               display: none;
             }
           }
+        }
+
+        .cs-button-solid {
+          background-color: var(--medium);
         }
       }
     }

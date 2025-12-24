@@ -12,6 +12,10 @@ import CTA from "@components/CTA/CTASimple.astro";
 // Images
 import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+
+import SoftWashIMG1 from "@assets/images/services/softWash1.jpeg";
+import SoftWashIMG2 from "@assets/images/services/softWash2.jpeg";
+import SoftWashIMG3 from "@assets/images/services/softWash3.jpeg";
 ---
 
 <BaseLayout
@@ -19,7 +23,7 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	description="Siding and other exterior home surfaces in Jacksonville can develop algae, mildew, and general discoloration due to humidity and rainfall. House soft washing uses low-pressure application of water and appropriate cleaning solutions to gently remove this buildup without relying on high pressure directly against the siding."
 	heroImage={optimizedImage}
 >
-	<Banner title="Service 3" image={optimizedImage} />
+	<Banner title="House Soft Washing" image={optimizedImage} />
 
 	<!-- SBS 1 -->
 	<section id="sbs-1598">
@@ -33,48 +37,22 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 					appropriate cleaning solutions to gently remove this buildup without
 					relying on high pressure directly against the siding.
 				</p>
-				<picture class="cs-picture cs-picture1">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/people.jpg"
-						alt="people"
-						width="608"
-						height="406"
-					/>
-				</picture>
+				<Picture
+					src={SoftWashIMG1}
+					alt="wooden patio porch being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture1" }}
+				/>
 			</div>
 			<div class="cs-stats-group">
-				<picture class="cs-picture cs-picture2">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model2.jpg"
-						alt="people"
-						width="608"
-						height="662"
-					/>
-				</picture>
+				<Picture
+					src={SoftWashIMG2}
+					alt="wooden patio porch being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture2" }}
+				/>
 
 				<h2>Benefits of House Soft Washing</h2>
 				<ul class="cs-stats">
@@ -124,25 +102,14 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 
 	<section id="sbs-1565">
 		<div class="cs-container">
-			<picture class="cs-picture">
-				<source
-					media="(max-width: 600px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<img
-					loading="lazy"
-					decoding="async"
-					src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-					alt="model"
-					width="586"
-					height="752"
-					aria-hidden="true"
-				/>
-			</picture>
+			<Picture
+				src={SoftWashIMG3}
+				alt="wooden patio porch being pressured washed"
+				width={586}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture" }}
+			/>
+
 			<div class="cs-content">
 				<span class="cs-topper">How soft washing works</span>
 				<h2 class="cs-title">Soft Washing Process</h2>
