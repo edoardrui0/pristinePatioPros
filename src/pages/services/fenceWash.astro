@@ -12,6 +12,10 @@ import CTA from "@components/CTA/CTASimple.astro";
 // Images
 import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+
+import FenceWashIMG1 from "@assets/images/services/fenceWash1.jpeg";
+import FenceWashIMG2 from "@assets/images/services/fenceWash2.jpeg";
+import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 ---
 
 <BaseLayout
@@ -25,26 +29,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 	<section id="sbs-2316">
 		<div class="cs-container">
 			<div class="cs-content cs-content1">
-				<picture class="cs-picture cs-picture1">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-						alt="people"
-						width="608"
-						height="406"
-					/>
-				</picture>
+				<Picture
+					src={FenceWashIMG1}
+					alt="wooden patio porch being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture1" }}
+				/>
 				<div class="cs-wrapper cs-wrapper1">
 					<h1 class="cs-title">Fence Washing in Jacksonville, FL</h1>
 					<p class="cs-text">
@@ -68,26 +59,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				</div>
 			</div>
 			<div class="cs-content cs-content2">
-				<picture class="cs-picture cs-picture2">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/construction4.jpg"
-						alt="people"
-						width="608"
-						height="406"
-					/>
-				</picture>
+				<Picture
+					src={FenceWashIMG2}
+					alt="wooden patio porch being pressured washed"
+					width={608}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture2" }}
+				/>
 				<div class="cs-wrapper cs-wrapper2">
 					<ul class="cs-ul">
 						<strong>Fence Types Typically Cleaned</strong>
@@ -127,25 +105,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 
 	<section id="sbs-1565">
 		<div class="cs-container">
-			<picture class="cs-picture">
-				<source
-					media="(max-width: 600px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<img
-					loading="lazy"
-					decoding="async"
-					src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-					alt="model"
-					width="586"
-					height="752"
-					aria-hidden="true"
-				/>
-			</picture>
+			<Picture
+				src={FenceWashIMG3}
+				alt="wooden patio porch being pressured washed"
+				width={586}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture" }}
+			/>
 			<div class="cs-content">
 				<span class="cs-topper">How fence cleaning works</span>
 				<h2 class="cs-title">Fence Cleaning Method</h2>

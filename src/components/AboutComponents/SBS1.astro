@@ -1,3 +1,9 @@
+---
+import { Picture } from "astro:assets";
+
+import PFP from "@assets/images/about/PFP-transparent.png";
+---
+
 <section id="sbs-2369">
   <div class="cs-wrapper">
     <p class="cs-header">
@@ -8,39 +14,32 @@
       home exteriors, fences, gutters, and windows are cleaned with the goal of
       making properties feel more cared for without complicating the process.
     </p>
-    <img
-      class="cs-arrow"
-      loading="lazy"
-      decoding="async"
-      src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/curve-arrow.svg"
-      alt="arrow graphic"
-      width="154"
-      height="120"
-    />
   </div>
   <div class="cs-container">
     <div class="cs-image-group">
       <!--Main Image-->
-      <picture class="cs-picture">
-        <!--Mobile Image-->
-        <source
-          media="(max-width: 600px)"
-          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png"
-        />
-        <!--Tablet and above Image-->
-        <source
-          media="(min-width: 601px)"
-          srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png"
-        />
+      <Picture
+        src={PFP}
+        alt="pathway before pressure wash"
+        width={565}
+        formats={["avif", "webp"]}
+        pictureAttributes={{ class: "cs-picture" }}
+        priority
+      />
+      <!-- <picture class="cs-picture">
+        Mobile Image
+        <source media="(max-width: 600px)" srcset={PFP.src} />
+        Tablet and above Image
+        <source media="(min-width: 601px)" srcset={PFP.src} />
         <img
           loading="lazy"
           decoding="async"
-          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/therapist1.png"
+          src={PFP.src}
           alt="therapist"
           width="565"
           height="814"
         />
-      </picture>
+      </picture> -->
       <img
         class="cs-flower"
         loading="lazy"
@@ -325,8 +324,13 @@
       padding: var(--sectionPadding);
       padding-bottom: 0;
 
+      .cs-header {
+        margin: 0 0 (96/16rem) 0;
+      }
+
       .cs-container {
         max-width: (1280/16rem);
+        max-height: (640/16rem);
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;

@@ -12,6 +12,10 @@ import CTA from "@components/CTA/CTASimple.astro";
 // Images
 import landingImage from "@assets/images/landing.jpg"; // <-- THE PATH TO THE ASSET YOU WANT TO PRELOAD - The asset must live in src
 const optimizedImage = await getImage({ src: landingImage, format: "webp" });
+
+import PatioIMG1 from "@assets/images/services/patio1.jpeg";
+import PatioIMG2 from "@assets/images/services/patio2.jpeg";
+import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 ---
 
 <BaseLayout
@@ -26,68 +30,21 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 		<div class="cs-container">
 			<div class="cs-image-group">
 				<!--Top left image-->
-				<picture class="cs-picture cs-picture1">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-						alt="wedding photoshoot"
-						width="297"
-						height="366"
-					/>
-				</picture>
+				<Picture
+					src={PatioIMG1}
+					alt="wooden patio porch being pressured washed"
+					width={297}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture1" }}
+				/>
 				<!--Bottom right image-->
-				<picture class="cs-picture cs-picture2">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-						alt="photograph of a woman"
-						width="405"
-						height="376"
-					/>
-				</picture>
-				<!--Middle image-->
-				<picture class="cs-picture cs-picture3">
-					<!--Mobile Image-->
-					<source
-						media="(max-width: 600px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-					/>
-					<!--Tablet and above Image-->
-					<source
-						media="(min-width: 601px)"
-						srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-					/>
-					<img
-						loading="lazy"
-						decoding="async"
-						src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-						alt="children's birthday"
-						width="218"
-						height="155"
-					/>
-				</picture>
+				<Picture
+					src={PatioIMG2}
+					alt="wooden patio porch being pressured washed"
+					width={405}
+					formats={["avif", "webp"]}
+					pictureAttributes={{ class: "cs-picture cs-picture2" }}
+				/>
 			</div>
 			<div class="cs-content">
 				<div class="cs-flex">
@@ -102,46 +59,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				</div>
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
 				<div class="cs-content-images">
-					<picture class="cs-picture cs-picture1">
-						<!--Mobile Image-->
-						<source
-							media="(max-width: 600px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-						/>
-						<!--Tablet and above Image-->
-						<source
-							media="(min-width: 601px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-						/>
-						<img
-							loading="lazy"
-							decoding="async"
-							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction16.jpg"
-							alt="wedding photoshoot"
-							width="297"
-							height="366"
-						/>
-					</picture>
-					<picture class="cs-picture cs-picture3">
-						<!--Mobile Image-->
-						<source
-							media="(max-width: 600px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-						/>
-						<!--Tablet and above Image-->
-						<source
-							media="(min-width: 601px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-						/>
-						<img
-							loading="lazy"
-							decoding="async"
-							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png"
-							alt="children's birthday"
-							width="218"
-							height="155"
-						/>
-					</picture>
+					<Picture
+						src={PatioIMG1}
+						alt="wooden patio porch being pressured washed"
+						width={297}
+						formats={["avif", "webp"]}
+						pictureAttributes={{ class: "cs-picture cs-picture1" }}
+					/>
 				</div>
 			</div>
 			<ul class="cs-card-group">
@@ -176,26 +100,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 				</li>
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
 				<li class="cs-item cs-item-picture">
-					<picture class="cs-picture cs-picture2">
-						<!--Mobile Image-->
-						<source
-							media="(max-width: 600px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-						/>
-						<!--Tablet and above Image-->
-						<source
-							media="(min-width: 601px)"
-							srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-						/>
-						<img
-							loading="lazy"
-							decoding="async"
-							src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/construction17.jpg"
-							alt="photograph of a woman"
-							width="405"
-							height="376"
-						/>
-					</picture>
+					<Picture
+						src={PatioIMG2}
+						alt="wooden patio porch being pressured washed"
+						width={405}
+						formats={["avif", "webp"]}
+						pictureAttributes={{ class: "cs-picture cs-picture2" }}
+					/>
 				</li>
 			</ul>
 		</div>
@@ -225,25 +136,13 @@ const optimizedImage = await getImage({ src: landingImage, format: "webp" });
 
 	<section id="sbs-1565">
 		<div class="cs-container">
-			<picture class="cs-picture">
-				<source
-					media="(max-width: 600px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<source
-					media="(min-width: 601px)"
-					srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-				/>
-				<img
-					loading="lazy"
-					decoding="async"
-					src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/model.jpg"
-					alt="model"
-					width="586"
-					height="752"
-					aria-hidden="true"
-				/>
-			</picture>
+			<Picture
+				src={PatioIMG3}
+				alt="wooden patio porch being pressured washed"
+				width={586}
+				formats={["avif", "webp"]}
+				pictureAttributes={{ class: "cs-picture" }}
+			/>
 			<div class="cs-content">
 				<span class="cs-topper">How patio cleaning works</span>
 				<h2 class="cs-title">Patio Cleaning Approach</h2>
