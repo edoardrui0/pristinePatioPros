@@ -3,7 +3,7 @@ export const SITE = {
 	title: "Pristine Patio Pros LLC",
 	tagline: "Professional Pressure Washing in Jacksonville, FL",
 	description: "Code Stitch Web Designs offers top-tier web design and development services to meet all your project needs. Start exploring and contact our team for superior quality and reliability.",
-	url: "https://www.yourwebsite.com",
+	url: "https://pristinepatiopros.com/",
 	author: "Bay Breeze Web Studio",
 	locale: "en",
 };
