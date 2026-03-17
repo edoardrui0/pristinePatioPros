@@ -191,7 +191,7 @@ import after6 from "@assets/images/gallery/6-after.jpeg";
           list-style: none;
           width: 100%;
           height: 100%;
-          aspect-ratio: 1;
+          aspect-ratio: 1.25;
           margin: 0;
           position: relative;
           display: block;
@@ -226,6 +226,8 @@ import after6 from "@assets/images/gallery/6-after.jpeg";
           height: 100%;
           display: block;
           position: relative;
+          border-radius: 0.75rem;
+          box-shadow: 7px 10px 0px -4px #000000;
 
           img {
             position: absolute;
@@ -234,6 +236,8 @@ import after6 from "@assets/images/gallery/6-after.jpeg";
             height: 100%;
             width: 100%;
             object-fit: cover;
+            border-radius: 0.75rem;
+            box-shadow: 7px 10px 0px -4px #000000;
           }
         }
 
@@ -249,7 +253,6 @@ import after6 from "@assets/images/gallery/6-after.jpeg";
           min-width: (150/16rem);
           padding: 0 (24/16rem);
           background-color: var(--primary);
-          border-radius: (4/16rem);
           display: inline-block;
           position: relative;
           z-index: 1;
@@ -266,7 +269,7 @@ import after6 from "@assets/images/gallery/6-after.jpeg";
             top: 0;
             left: 0;
             z-index: -1;
-            border-radius: (4/16rem);
+            border-radius: (12/16rem);
             transition: width 0.3s;
           }
 

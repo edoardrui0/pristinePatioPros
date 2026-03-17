@@ -21,11 +21,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 <header id="cs-navigation">
 	<div class="cs-container">
 		<!--Nav Logo-->
-		<a
-			href="/"
-			class="cs-logo"
-			aria-label="Return to [Company Name] Home page"
-		>
+		<a href="/" class="cs-logo" aria-label="Return to [Company Name] Home page">
 			<Icon name="logo-black" />
 		</a>
 		<!--Navigation List-->
@@ -55,9 +51,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 								"cs-li-link",
 								{ "cs-active": Astro.url.pathname === "/" },
 							]}
-							aria-current={Astro.url.pathname === "/"
-								? "page"
-								: undefined}
+							aria-current={Astro.url.pathname === "/" ? "page" : undefined}
 						>
 							Home
 						</a>
@@ -68,8 +62,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							class:list={[
 								"cs-li-link",
 								{
-									"cs-active":
-										Astro.url.pathname === "/about/",
+									"cs-active": Astro.url.pathname === "/about/",
 								},
 							]}
 							aria-current={Astro.url.pathname === "/about/"
@@ -86,10 +79,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							class:list={[
 								"cs-li-link cs-dropdown-toggle",
 								{
-									"cs-active":
-										Astro.url.pathname.includes(
-											"/projects/",
-										),
+									"cs-active": Astro.url.pathname.includes("/projects/"),
 								},
 							]}
 							aria-haspopup="menu"
@@ -99,16 +89,12 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							Projects
 							<Icon name="mdi--caret" class="cs-drop-icon" />
 						</button>
-						<ul
-							class="cs-drop-ul"
-							aria-labelledby="projects-dropdown-toggle"
-						>
+						<ul class="cs-drop-ul" aria-labelledby="projects-dropdown-toggle">
 							<li class="cs-drop-li">
 								<a
 									href="/projects/project-1/"
 									class="cs-li-link cs-drop-link"
-									aria-current={Astro.url.pathname ===
-									"/projects/project-1/"
+									aria-current={Astro.url.pathname === "/projects/project-1/"
 										? "page"
 										: undefined}>Project 1</a
 								>
@@ -117,8 +103,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 								<a
 									href="/projects/project-2/"
 									class="cs-li-link cs-drop-link"
-									aria-current={Astro.url.pathname ===
-									"/projects/project-2/"
+									aria-current={Astro.url.pathname === "/projects/project-2/"
 										? "page"
 										: undefined}>Project 2</a
 								>
@@ -131,8 +116,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							class:list={[
 								"cs-li-link",
 								{
-									"cs-active":
-										Astro.url.pathname === "/reviews/",
+									"cs-active": Astro.url.pathname === "/reviews/",
 								},
 							]}
 							aria-current={Astro.url.pathname === "/reviews/"
@@ -148,8 +132,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							class:list={[
 								"cs-li-link",
 								{
-									"cs-active":
-										Astro.url.pathname === "/blog/",
+									"cs-active": Astro.url.pathname === "/blog/",
 								},
 							]}
 							aria-current={Astro.url.pathname === "/blog/"
@@ -165,8 +148,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 							class:list={[
 								"cs-li-link",
 								{
-									"cs-active":
-										Astro.url.pathname === "/contact/",
+									"cs-active": Astro.url.pathname === "/contact/",
 								},
 							]}
 							aria-current={Astro.url.pathname === "/contact/"
@@ -285,7 +267,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 				margin: 0 0 0 auto;
 				background-color: transparent;
 				border: none;
-				border-radius: (4/16rem);
+				border-radius: (12/16rem);
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -299,8 +281,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 
 				.cs-line2 {
 					top: 50%;
-					transform: translate(-50%, -50%) translateY(0)
-						rotate(-225deg);
+					transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
 					transform-origin: center;
 				}
 
@@ -386,8 +367,7 @@ import DarkModeToggle from "@components/DarkModeToggle/DarkModeToggle.astro";
 				height: 65vh;
 				margin: 0;
 				/* 28px - 40px */
-				padding: (48/16rem) clamp(1.75rem, 3vw, 2.5rem) (32/16rem)
-					(70/16rem);
+				padding: (48/16rem) clamp(1.75rem, 3vw, 2.5rem) (32/16rem) (70/16rem);
 				display: flex;
 				flex-direction: column;
 				justify-content: flex-start;
