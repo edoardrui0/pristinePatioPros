@@ -1,5 +1,6 @@
 ---
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 import stats from "@assets/images/hero/stats.jpg";
 ---
@@ -8,14 +9,11 @@ import stats from "@assets/images/hero/stats.jpg";
   <ul class="cs-card-group">
     <li class="cs-item">
       <picture class="cs-picture">
-        <img
+        <Icon
           class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person2-gold.svg"
-          alt="icon"
+          name="owner"
           width="35"
           height="40"
-          loading="lazy"
-          decoding="async"
           aria-hidden="true"
         />
       </picture>
@@ -26,14 +24,11 @@ import stats from "@assets/images/hero/stats.jpg";
     </li>
     <li class="cs-item">
       <picture class="cs-picture">
-        <img
+        <Icon
           class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg"
-          alt="icon"
-          width="40"
-          height="35"
-          loading="lazy"
-          decoding="async"
+          name="care"
+          width="35"
+          height="40"
           aria-hidden="true"
         />
       </picture>
@@ -44,14 +39,11 @@ import stats from "@assets/images/hero/stats.jpg";
     </li>
     <li class="cs-item">
       <picture class="cs-picture">
-        <img
+        <Icon
           class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg"
-          alt="icon"
-          width="40"
+          name="price-black"
+          width="35"
           height="40"
-          loading="lazy"
-          decoding="async"
           aria-hidden="true"
         />
       </picture>
@@ -146,6 +138,7 @@ import stats from "@assets/images/hero/stats.jpg";
         /* 28px - 40px */
         width: clamp(1.75rem, 3.9vw, 2.5rem);
         height: auto;
+        color: var(--backgroundBreakBlue);
       }
 
       .cs-flex-group {

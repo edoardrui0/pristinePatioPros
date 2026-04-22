@@ -3,6 +3,7 @@
 
 // Utils
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 
 // Images
 import linesBG from "@assets/SVGs/Curve-Line.svg";
@@ -31,14 +32,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/drivewayWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">Driveway Pressure Washing</h3>
         </div>
@@ -54,14 +48,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/patioWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">Patio Pressure Washing</h3>
         </div>
@@ -77,14 +64,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/softWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">House Soft Washing</h3>
         </div>
@@ -100,14 +80,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/fenceWash/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">Fence Washing</h3>
         </div>
@@ -123,14 +96,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/gutterCleaning/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">Gutter Cleaning</h3>
         </div>
@@ -146,14 +112,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       <a class="cs-item" href="/services/windowCleaning/">
         <div class="cs-hover-box">
           <picture class="cs-icon" aria-hidden="true">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.digitaloceanspaces.com/Gallery/arrows.svg"
-              alt="icon"
-              width="24"
-              height="24"
-            />
+            <Icon name="arrows-out" width="50" height="50" aria-hidden="true" />
           </picture>
           <h3 class="cs-h3">Window Cleaning</h3>
         </div>
@@ -168,16 +127,6 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       </a>
     </div>
   </div>
-  <img
-    alt="svg waves"
-    decoding="async"
-    src={linesBG.src}
-    aria-hidden="true"
-    loading="lazy"
-    class="cs-background"
-    height="568"
-    width="1280"
-  />
 </section>
 
 <!-- <section id="gallery">
@@ -396,7 +345,7 @@ import WindowIMG from "@assets/images/gallery/hero-gallery/window-cleaning.jpg";
       }
 
       .cs-h3 {
-        font-size: (16/16rem);
+        font-size: (24/16rem);
         line-height: 1.2em;
         font-weight: 700;
         margin: 0;

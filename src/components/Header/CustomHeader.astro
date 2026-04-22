@@ -256,7 +256,14 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
       </a>
       <a href="/contact" class="cs-button-border">
         Get In Touch
-        <img
+        <Icon
+          class="cs-icon"
+          name="arrow-right-red"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        />
+        <!-- <img
           class="cs-icon"
           loading="lazy"
           decoding="async"
@@ -264,7 +271,7 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
           alt="icon"
           width="20"
           height="20"
-        />
+        /> -->
       </a>
       <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
       <DarkModeToggle />
@@ -1690,6 +1697,7 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
 
         .cs-icon {
           width: (20/16rem);
+          filter: grayscale(1);
         }
       }
     }

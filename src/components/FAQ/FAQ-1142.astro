@@ -1,0 +1,520 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="faq-1142">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ</span>
+      <h2 class="cs-title">
+        Frequently Asked Questions About Pressure Washing in Jacksonville
+      </h2>
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              How often should exterior pressure washing be completed in
+              Jacksonville, FL?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            In the Jacksonville climate, exterior cleaning is commonly completed
+            once per year, and in shaded or high-moisture areas it may be
+            scheduled more frequently. The exact timing depends on nearby trees,
+            sprinkler patterns, and the level of organic growth.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              What is the difference between pressure washing and soft washing?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Pressure washing uses higher pressure water to clean durable
+            surfaces such as concrete driveways and some patios. Soft washing
+            uses lower pressure combined with appropriate cleaning solutions and
+            is used on more delicate surfaces such as siding where direct high
+            pressure may not be suitable.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">
+              Which surfaces around the property can be cleaned?
+            </span>
+          </button>
+          <p class="cs-item-p">
+            Common surfaces include driveways, patios, walkways, pool decks,
+            siding, fences, and some exterior trim. During the estimate,
+            surfaces are reviewed to confirm which areas are appropriate for
+            each method.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">Is the company licensed?</span>
+          </button>
+          <p class="cs-item-p">
+            Pristine Patio Pros operates as a properly registered business in
+            the state of Florida.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            <span class="cs-button-text">How are prices determined?</span>
+          </button>
+          <p class="cs-item-p">
+            Pricing is based primarily on the square footage of the areas being
+            cleaned, along with access, condition, and the type of surface. A
+            free estimate is provided before work is scheduled so that the total
+            cost is clear.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <Icon
+            class="cs-icon"
+            name="offer"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+        </div>
+        <h3 class="cs-number">15% Off</h3>
+        <span class="cs-desc">First Time Customers</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <Icon
+            class="cs-icon"
+            name="offer"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+        </div>
+        <h3 class="cs-number">10% Off</h3>
+        <span class="cs-desc">Veterans/Military</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <Icon
+            class="cs-icon"
+            name="owner"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+        </div>
+        <h3 class="cs-number">Est. 2025</h3>
+        <span class="cs-desc">Locally Owned From Day One</span>
+      </li>
+      <li class="cs-item">
+        <div class="cs-image-group">
+          <Icon
+            class="cs-icon"
+            name="price-black"
+            width="32"
+            height="32"
+            aria-hidden="true"
+          />
+        </div>
+        <h3 class="cs-number">Free</h3>
+        <span class="cs-desc">Estimates for Peace of Mind</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<style lang="less">
+  /*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+  /* Mobile - 360px */
+  @media only screen and (min-width: 0rem) {
+    #faq-1142 {
+      padding: var(--sectionPadding);
+      // background: #f7f7f7;
+
+      .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: (704/16rem);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* 40px - 48px */
+        gap: clamp(2.5rem, 5vw, 3rem);
+      }
+
+      .cs-content {
+        text-align: left;
+      }
+
+      .cs-title {
+        margin: 0 0 (24/16rem) 0;
+      }
+
+      .cs-faq-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        transition: border-bottom 0.3s;
+
+        &.active {
+          border-color: var(--primary);
+          .cs-button {
+            color: var(--primary);
+            &:before {
+              background-color: var(--primary);
+              transform: rotate(315deg);
+            }
+            &:after {
+              background-color: var(--primary);
+              transform: rotate(-315deg);
+            }
+          }
+          .cs-item-p {
+            height: auto;
+            /* 20px - 24px bottom */
+            /* 16px - 24px left & right */
+            padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 1.3vw, 1.5rem);
+            opacity: 1;
+          }
+        }
+      }
+
+      .cs-button {
+        font-size: (16/16rem);
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 16px - 20px */
+        padding: clamp(1rem, 1.3vw, 1.25rem);
+        border: none;
+        background: transparent;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+          background-color 0.3s,
+          color 0.3s;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:before {
+          /* left line */
+          content: "";
+          width: (8/16rem);
+          height: (2/16rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: (24/16rem);
+          transform: rotate(45deg);
+          /* animate the transform from the left side of the x axis, and the center of the y */
+          transform-origin: left center;
+          transition: transform 0.5s;
+        }
+
+        &:after {
+          /* right line */
+          content: "";
+          width: (8/16rem);
+          height: (2/16rem);
+          background-color: var(--headerColor);
+          opacity: 1;
+          border-radius: 50%;
+          position: absolute;
+          display: block;
+          top: 45%;
+          right: (21/16rem);
+          transform: rotate(-45deg);
+          /* animate the transform from the right side of the x axis, and the center of the y */
+          transform-origin: right center;
+          transition: transform 0.5s;
+        }
+      }
+
+      .cs-button-text {
+        width: 80%;
+        display: block;
+      }
+
+      .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+          opacity 0.3s,
+          padding-bottom 0.3s;
+      }
+
+      .cs-card-group {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        /* 8px - 20px */
+        gap: clamp(0.5rem, 2vw, 1.25rem);
+      }
+
+      .cs-item {
+        width: 100%;
+        text-align: center;
+        list-style: none;
+        margin: 0;
+        /* 24px - 32px */
+        padding: (32/16rem) clamp(1.5rem, 3vw, 2rem);
+        background-color: var(--backgroundBreakBlue);
+        border-radius: (16/16rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        grid-column: span 6;
+        grid-row: span 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        border: 3px solid black;
+        box-shadow: 7px 10px 0px -4px #000000;
+
+        // &:hover {
+        //   box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.35);
+        //   border-color: transparent;
+        //   .cs-h3 {
+        //     color: var(--primary);
+        //   }
+        // }
+      }
+
+      .cs-image-group {
+        /* 80px - 100px */
+        // width: clamp(5rem, 6vw, 6.25rem);
+        // height: auto;
+        width: (72/16rem);
+        height: (72/16rem);
+
+        background-color: var(--secondary);
+        border-radius: (12/16rem);
+
+        /* 20px - 24px */
+        margin: 0 0 clamp(1.25rem, 2.5vw, 1.5rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
+        position: relative;
+      }
+
+      .cs-icon {
+        /* 38px - 48px */
+        width: clamp(2.375rem, 3vw, 3rem);
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+
+      .cs-graphic {
+        width: 100%;
+        height: auto;
+      }
+
+      .cs-number {
+        /* 25px - 49px */
+        font-size: clamp(1.5625rem, 3.3vw, 2.625rem);
+        line-height: 1.2em;
+        font-weight: bold;
+        text-align: inherit;
+        margin: 0;
+        color: white;
+        transition: color 0.3s;
+      }
+
+      .cs-desc {
+        font-size: (16/16rem);
+        font-weight: bold;
+        line-height: 1.5em;
+        text-align: inherit;
+        margin: 0;
+        color: white;
+      }
+
+      .cs-floater {
+        /* 150px - 271px */
+        width: clamp(9.375rem, 13vw, 16.9375rem);
+        height: auto;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #faq-1142 {
+      .cs-item {
+        grid-column: span 3;
+      }
+    }
+  }
+
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #faq-1142 {
+      .cs-container {
+        max-width: (1280/16rem);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: (52/16rem);
+      }
+
+      .cs-content {
+        width: 46%;
+        max-width: (522/16rem);
+        /* prevents flexbox from squishing it */
+        flex: none;
+      }
+
+      .cs-card-group {
+        max-width: (630/16rem);
+        /* pushes up the same amount the cs-items are being translated up to maintain the proper spacing */
+        margin-top: (60/16rem);
+        align-items: stretch;
+        /* sends it to the left in the 1st */
+        order: -1;
+      }
+
+      .cs-item {
+        grid-column: span 6;
+        // &:nth-of-type(2),
+        // &:nth-of-type(4) {
+        //   transform: translateY(-3.75rem);
+        // }
+      }
+    }
+  }
+
+  /* Large Desktop - 1600px */
+  @media only screen and (min-width: 100rem) {
+    #faq-1142 {
+      .cs-floater {
+        display: block;
+      }
+    }
+  }
+
+  /* Dark Mode */
+  @media only screen and (min-width: 0rem) {
+    body.dark-mode {
+      #faq-1142 {
+        background-color: var(--medium) rgba(0, 0, 0, 0.2);
+
+        .cs-topper {
+          color: var(--secondary);
+        }
+
+        .cs-title,
+        .cs-item-p,
+        .cs-number,
+        .cs-desc {
+          color: var(--bodyTextColorWhite);
+        }
+
+        .cs-faq-item {
+          border-color: rgba(255, 255, 255, 0.2);
+          &.active {
+            border-color: var(--secondary);
+            .cs-button {
+              color: var(--secondary);
+              &:before,
+              &:after {
+                background-color: var(--secondary);
+              }
+            }
+          }
+        }
+
+        .cs-graphic {
+          opacity: 0.2;
+        }
+
+        .cs-icon {
+          filter: grayscale(1) brightness(1000%);
+        }
+
+        .cs-desc {
+          opacity: 0.8;
+        }
+
+        .cs-button {
+          color: var(--bodyTextColorWhite);
+          &:before,
+          &:after {
+            background-color: var(--bodyTextColorWhite);
+          }
+        }
+
+        .cs-item {
+          background-color: var(--medium);
+        }
+
+        .cs-floater {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>
