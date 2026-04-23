@@ -393,7 +393,7 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
   @media only screen and (min-width: 0rem) {
     body.dark-mode {
       #sbs-2277 {
-        background-color: #053a7d;
+        background-color: #031626;
 
         .cs-title,
         .cs-text,
@@ -407,6 +407,12 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
 
         .cs-text {
           opacity: 0.8;
+        }
+
+        .cs-li {
+          background-color: var(--accent);
+          box-shadow: 7px 10px 0px -4px #7b7b7b;
+          border: none;
         }
 
         .cs-item {
@@ -428,7 +434,7 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
           }
 
           &:last-of-type {
-            background-color: var(--medium);
+            background-color: var(--secondary);
             &::before {
               display: none;
             }
@@ -436,7 +442,9 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
         }
 
         .cs-button-solid {
-          background-color: var(--medium);
+          background-color: var(--secondary);
+          box-shadow: 7px 10px 0px -4px #7b7b7b;
+          border: none;
         }
       }
     }
