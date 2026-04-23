@@ -23,16 +23,6 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
           </p>
           <ul class="cs-ul">
             <li class="cs-li">
-              <img
-                class="cs-icon"
-                aria-hidden="true"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg"
-                loading="lazy"
-                decoding="async"
-                alt="squares"
-                width="11"
-                height="11"
-              />
               <p class="cs-item-text">
                 <strong>Owner Involvement:</strong>
                 The owner remains directly involved with estimates and service, which
@@ -41,16 +31,6 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
               </p>
             </li>
             <li class="cs-li">
-              <img
-                class="cs-icon"
-                aria-hidden="true"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg"
-                loading="lazy"
-                decoding="async"
-                alt="squares"
-                width="11"
-                height="11"
-              />
               <p class="cs-item-text">
                 <strong>Attention to Everyday Surfaces:</strong>
                 Services are centered on the areas used most frequently, such as driveways,
@@ -59,16 +39,6 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
               </p>
             </li>
             <li class="cs-li">
-              <img
-                class="cs-icon"
-                aria-hidden="true"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg"
-                loading="lazy"
-                decoding="async"
-                alt="squares"
-                width="11"
-                height="11"
-              />
               <p class="cs-item-text">
                 <strong>Transparent Pricing:</strong> Square-foot based pricing is
                 used so that customers can see how the total is calculated. Quotes
@@ -76,16 +46,6 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
               </p>
             </li>
             <li class="cs-li">
-              <img
-                class="cs-icon"
-                aria-hidden="true"
-                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg"
-                loading="lazy"
-                decoding="async"
-                alt="squares"
-                width="11"
-                height="11"
-              />
               <p class="cs-item-text">
                 <strong>Consideration for Family and Guests:</strong>
                 Exterior cleaning supports safer walking surfaces and a more cared-for
@@ -177,6 +137,7 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
       .cs-text {
         &:last-of-type {
           margin-bottom: (32/16rem);
+          font-weight: bold;
         }
       }
 
@@ -198,6 +159,11 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
         display: flex;
         align-items: flex-start;
         gap: (8/16rem);
+        border: 2px solid black;
+        border-radius: 0.75rem;
+        background-color: var(--backgroundBreakBlue);
+        padding: 1rem;
+        box-shadow: 7px 10px 0px -4px #000000;
       }
 
       .cs-h3 {
@@ -221,11 +187,11 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
       .cs-item-text {
         font-size: (16/16rem);
         line-height: 1.5em;
-        color: var(--bodyTextColor);
+        color: var(--whiteText);
         margin: 0;
 
         strong {
-          color: var(--headerColor);
+          color: var(--whiteText);
         }
       }
 
@@ -241,7 +207,7 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
         /* prevents padding from adding to the width */
         box-sizing: border-box;
         padding: 0 (24/16rem);
-        background-color: var(--primary);
+        background-color: var(--backgroundBreakBlue);
         color: #fff;
         display: inline-block;
         position: relative;
@@ -299,7 +265,7 @@ import WashIMG from "@assets/images/about/washIMG.jpeg";
         border-radius: 0.75rem;
 
         &:last-of-type {
-          background-color: var(--primary);
+          background-color: var(--backgroundBreakBlue);
         }
       }
 

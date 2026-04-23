@@ -2,52 +2,20 @@
 import { Picture } from "astro:assets";
 
 import PFP from "@assets/images/about/PFP-transparent.png";
+import PFP1 from "@assets/images/about/PFP.jpeg";
 ---
 
 <section id="sbs-2369">
-  <div class="cs-wrapper">
-    <p class="cs-header">
-      Pristine Patio Pros was created as a local exterior cleaning service
-      focused on practical, steady results rather than volume. The company is
-      based in Jacksonville, FL and serves surrounding communities within
-      approximately 25 miles, including Yulee and St. Johns. Driveways, patios,
-      home exteriors, fences, gutters, and windows are cleaned with the goal of
-      making properties feel more cared for without complicating the process.
-    </p>
-  </div>
   <div class="cs-container">
     <div class="cs-image-group">
       <!--Main Image-->
       <Picture
-        src={PFP}
+        src={PFP1}
         alt="pathway before pressure wash"
         width={565}
         formats={["avif", "webp"]}
         pictureAttributes={{ class: "cs-picture" }}
         priority
-      />
-      <!-- <picture class="cs-picture">
-        Mobile Image
-        <source media="(max-width: 600px)" srcset={PFP.src} />
-        Tablet and above Image
-        <source media="(min-width: 601px)" srcset={PFP.src} />
-        <img
-          loading="lazy"
-          decoding="async"
-          src={PFP.src}
-          alt="therapist"
-          width="565"
-          height="814"
-        />
-      </picture> -->
-      <img
-        class="cs-flower"
-        loading="lazy"
-        decoding="async"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/flower-blur.svg"
-        alt="flower blur"
-        width="635"
-        height="697"
       />
     </div>
     <div class="cs-content">
@@ -56,55 +24,20 @@ import PFP from "@assets/images/about/PFP-transparent.png";
         Locally Operated Exterior Cleaning in Jacksonville
       </h2>
       <p class="cs-text">
-        Pristine Patio Pros is owned and operated by Nicholas Ruiz. The business
-        was formed to support a sustainable schedule and income for a local
-        family while providing a needed service for homeowners, rental
-        properties, and small businesses. Each project is approached with
-        attention to safety, surface protection, and the specific conditions
-        found on the property. Surfaces are assessed before cleaning, and the
-        pressure and solutions used are selected accordingly.
+        Hi there! I'm Nicholas Ruiz and I am the founder and owner of Pristine
+        Patio Pros. I created Pristine because I have a strong desire to provide
+        a much needed service for homeowners and local businesses that not only
+        makes the neighborhood look nice but also puts a smile on everyone's
+        face. Operating this business also brings in an honest, sustainable
+        income for my family and I.
+        <br /><br />
+        Each project we handle is approached with attention to safety, protection
+        for your surfaces and pride in our work. No matter the project, they always
+        get the same attention whether it's a single driveway or a full exterior cleaning.
+        Surfaces are assessed before work begins, the right method is selected for
+        each material, and the surrounding area is kept tidy throughout. Rest assured
+        that you will be in pristine hands!
       </p>
-      <ul class="cs-ul">
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          Exterior cleaning focused on real homes and everyday properties
-        </li>
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          Careful selection of cleaning methods for each surface
-        </li>
-        <li class="cs-li">
-          <img
-            class="cs-icon"
-            aria-hidden="true"
-            loading="lazy"
-            decoding="async"
-            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/swirl.svg"
-            alt="checkmark"
-            width="24"
-            height="24"
-          />
-          Respect for the time, property, and privacy of each customer
-        </li>
-      </ul>
       <a href="/contact" class="cs-button-solid">Get in Contact Today</a>
     </div>
   </div>
@@ -115,7 +48,7 @@ import PFP from "@assets/images/about/PFP-transparent.png";
   @media only screen and (min-width: 0rem) {
     #sbs-2369 {
       padding: var(--sectionPadding);
-      padding-bottom: 0;
+      padding-bottom: (48/16rem);
       // background-color: #fbf5f1;
       /* clips anything overflowing */
       overflow: hidden;
@@ -254,7 +187,7 @@ import PFP from "@assets/images/about/PFP-transparent.png";
         overflow: hidden;
         min-width: (150/16rem);
         padding: 0 (24/16rem);
-        background-color: var(--primary);
+        background-color: var(--backgroundBreakBlue);
         display: inline-block;
         position: relative;
         z-index: 1;
@@ -302,6 +235,8 @@ import PFP from "@assets/images/about/PFP-transparent.png";
           width: 100%;
           height: auto;
           display: block;
+          border-radius: 0.75rem;
+          box-shadow: 10px 10px 0px -4px #000000;
         }
       }
 
@@ -322,7 +257,7 @@ import PFP from "@assets/images/about/PFP-transparent.png";
   @media only screen and (min-width: 75rem) {
     #sbs-2369 {
       padding: var(--sectionPadding);
-      padding-bottom: 0;
+      padding-bottom: (48/16rem);
 
       .cs-header {
         margin: 0 0 (96/16rem) 0;
@@ -373,7 +308,7 @@ import PFP from "@assets/images/about/PFP-transparent.png";
         height: 100%;
         width: auto;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
         position: relative;
         z-index: 1;
