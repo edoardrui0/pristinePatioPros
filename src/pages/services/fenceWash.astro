@@ -5,8 +5,7 @@ import { Picture, getImage } from "astro:assets";
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
-import SBS1 from "@components/ServicesPage/Layout1/SBS1.astro";
-import SBS2 from "@components/ServicesPage/SBS2.astro";
+import Stats from "@components/Stats/stats.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
@@ -39,70 +38,84 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 				<div class="cs-wrapper cs-wrapper1">
 					<h1 class="cs-title">Fence Washing in Jacksonville, FL</h1>
 					<p class="cs-text">
-						Fences around homes and properties are exposed to constant weather
-						and moisture. This leads to streaks, algae, and overall fading of
-						appearance. Fence washing is used to clean these surfaces so
-						property lines appear more consistent and cared for.
+						Fences are exposed to constant weather and moisture, and in
+						Jacksonville's climate that means streaks, algae, and general fading
+						build up faster than most homeowners notice until it becomes hard to
+						ignore. Fence washing addresses that buildup across the full
+						surface, bringing back a more consistent color along long runs of
+						fencing and clearing out the algae lines and streaking that moisture
+						leaves behind. The result is a cleaner, more uniform appearance
+						around the perimeter of the property that makes the whole yard feel
+						more put together. It is also worth noting that organic growth left
+						on fencing long enough will start to work against the material
+						itself, whether that is wood, vinyl, or chain link. Keeping the
+						surface clean is one of the simpler ways to slow that process down
+						and get more life out of the fence.
 					</p>
-					<ul class="cs-ul">
-						<strong>Benefits of Fence Washing</strong>
-						<li class="cs-li">
-							More consistent color across long runs of fencing
-						</li>
-						<li class="cs-li">
-							Reduced algae lines and streaking caused by moisture
-						</li>
-						<li class="cs-li">
-							A neater appearance around the perimeter of the property
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="cs-content cs-content2">
-				<Picture
-					src={FenceWashIMG2}
-					alt="wooden patio porch being pressured washed"
-					width={608}
-					formats={["avif", "webp"]}
-					pictureAttributes={{ class: "cs-picture cs-picture2" }}
-				/>
-				<div class="cs-wrapper cs-wrapper2">
-					<ul class="cs-ul">
-						<strong>Fence Types Typically Cleaned</strong>
-						<li class="cs-li">Vinyl fences</li>
-						<li class="cs-li">
-							Certain painted or sealed wood fences, after inspection
-						</li>
-						<li class="cs-li">Some metal fencing, where appropriate</li>
-					</ul>
-					<a class="cs-button-solid" href="/contact">Contact Us</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- SBS 2 -->
-	<div id="logos-1565">
+	<!-- 3-Card -->
+	<section id="services-1331">
 		<div class="cs-container">
-			<h1 class="logo-content">
-				Fence washing services are available for residential properties and
-				small commercial locations within the Jacksonville area.
-			</h1>
+			<h2 class="cs-h2">Fence Types Typically Cleaned</h2>
+			<ul class="cs-card-group">
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">Wood Fencing</h3>
+						<p class="cs-item-text">
+							Wood fencing is one of the more common types found around
+							Jacksonville homes, and it tends to collect mold, mildew, and
+							general discoloration fairly quickly in this climate. Moisture
+							gets trapped in the grain and along the posts, creating the kind
+							of buildup that makes a fence look far older than it actually is.
+							Fence washing removes that organic growth and restores a cleaner,
+							more natural appearance to the wood. Low pressure and appropriate
+							cleaning solutions are used to get the job done without damaging
+							the material.
+						</p>
+					</div>
+				</li>
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">Vinyl and PVC Fencing</h3>
+						<p class="cs-item-text">
+							Vinyl fencing is popular for its durability, but that doesn't mean
+							it stays clean on its own. Green algae and general grime tend to
+							cling to the surface over time, especially on the shaded side of
+							the fence. A soft wash approach works well here since vinyl
+							responds better to low pressure and cleaning solution than it does
+							to a direct high-pressure blast. The result is a fence that looks
+							closer to the bright, clean appearance it had when it was first
+							installed.
+						</p>
+					</div>
+				</li>
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">Chain Link Fencing</h3>
+						<p class="cs-item-text">
+							Chain link fencing might seem low maintenance, but dirt, rust
+							staining, and organic growth build up in the links and along the
+							posts over time. In Jacksonville's humidity that process moves
+							faster than most homeowners expect, leaving the fence looking worn
+							and neglected even when the rest of the property is well kept.
+							Pressure washing clears out the buildup that collects in and
+							around the links and gives the fence a cleaner overall appearance.
+							It is one of the quicker services to complete but makes a
+							noticeable difference in how the whole yard looks.
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<!-- Background Graphic -->
-		<picture class="cs-background">
-			<img
-				src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/waves-side.svg"
-				alt="waves"
-				width="1920"
-				height="300"
-				aria-hidden="true"
-				loading="lazy"
-				decoding="async"
-			/>
-		</picture>
-	</div>
+	</section>
 
+	<Stats />
+
+	<!-- SBS 2 -->
 	<section id="sbs-1565">
 		<div class="cs-container">
 			<Picture
@@ -117,18 +130,6 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 				<h2 class="cs-title">Fence Cleaning Method</h2>
 				<ul class="cs-card-group">
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/price-tag.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Walk Fence Line Carefully</h3>
 							<p class="cs-li-text">
@@ -144,18 +145,6 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 						</div>
 					</li>
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/sheild.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Select Settings and Cleaner</h3>
 							<p class="cs-li-text">
@@ -167,18 +156,6 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 						</div>
 					</li>
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Clean Sections and Rinse</h3>
 							<p class="cs-li-text">
@@ -418,7 +395,7 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 					position: absolute;
 					top: 0;
 					left: 0;
-					box-shadow: 7px 10px 0px -4px #000000;
+					box-shadow: 10px 10px 0px -4px #000000;
 					border-radius: 0.75rem;
 				}
 			}
@@ -525,6 +502,194 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 	}
 </style>
 
+<!-- 3-Card -->
+<style lang="less">
+	/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0rem) {
+		#services-1331 {
+			padding: 0 (16/16rem) (80/16rem);
+			position: relative;
+			z-index: 1;
+
+			.cs-container {
+				width: 100%;
+				/* changes to 1280px at tablet */
+				max-width: (550/16rem);
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				/* 48px - 64px */
+				gap: clamp(2rem, 6vw, 3rem);
+			}
+
+			.cs-content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				/* centers content horizontally, set to flex-start to left align */
+				align-items: center;
+				/* set text align to left if content needs to be left aligned */
+				text-align: center;
+			}
+
+			.cs-h2 {
+				border-bottom: 3px solid black;
+			}
+
+			.cs-flex-group {
+				/* prevents flexbox from squishing it */
+				flex: none;
+			}
+
+			.cs-card-group {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
+				row-gap: (16/16rem);
+			}
+
+			.cs-item {
+				list-style: none;
+				width: 100%;
+				box-sizing: border-box;
+				/* 40px - 60px top & bottom,  20px - 48px left & right, */
+				padding: clamp(2.5rem, 4.1vw, 3.125rem) clamp(1.25rem, 3.4vw, 2rem);
+				background-color: var(--backgroundBreakBlue);
+				grid-column: span 12;
+				transition:
+					transform 0.3s,
+					box-shadow 0.3s;
+				border: 2px solid black;
+				border-radius: 0.75rem;
+				box-shadow: 10px 10px 0px -4px #000000;
+
+				&:hover {
+					transform: translateY(-1rem);
+					box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+				}
+			}
+
+			.cs-link {
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				/* set text align to center if content needs to be centrally aligned */
+				text-align: left;
+			}
+
+			.cs-step {
+				font-size: var(--topperFontSize);
+				line-height: 1.2em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				/* 48px - 100px */
+				margin-bottom: clamp(3rem, 7.8vw, 6.25rem);
+				color: var(--primary);
+				display: block;
+				text-align: inherit;
+			}
+
+			.cs-h3 {
+				font-size: (20/16rem);
+				line-height: 1.2em;
+				font-weight: 900;
+				margin: 0;
+				margin-bottom: (12/16rem);
+				color: var(--whiteText);
+				transition: color 0.3s;
+				text-align: inherit;
+				border-bottom: 2px solid white;
+				padding-bottom: 8px;
+			}
+
+			.cs-item-text {
+				/* 14px - 16px */
+				font-size: clamp(0.875rem, 1.5vw, 1rem);
+				font-weight: 900;
+				line-height: 1.5em;
+				margin: 0;
+				color: var(--whiteText);
+				transition: color 0.3s;
+				text-align: inherit;
+			}
+		}
+	}
+
+	/* Tablet - 768px */
+	@media only screen and (min-width: 48rem) {
+		#services-1331 {
+			.cs-container {
+				max-width: (1280/16rem);
+			}
+
+			.cs-content {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-end;
+				/* 48px - 80px */
+				gap: clamp(3rem, 6vw, 5rem);
+				text-align: left;
+			}
+
+			.cs-title {
+				margin: 0;
+			}
+
+			.cs-flex-group {
+				width: 50%;
+			}
+
+			.cs-card-group {
+				flex-direction: row;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				column-gap: (16/16rem);
+			}
+
+			.cs-item {
+				grid-column: span 4;
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0rem) {
+		body.dark-mode {
+			#services-1331 {
+				background-color: rgba(0, 0, 0, 0.2);
+
+				.cs-topper {
+					color: var(--primaryLight);
+				}
+				.cs-title,
+				.cs-text,
+				.cs-h3,
+				.cs-item-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-text,
+				.cs-item-text {
+					opacity: 0.8;
+				}
+
+				.cs-item {
+					background-color: var(--medium);
+				}
+			}
+		}
+	}
+</style>
+
 <!-- SBS 2 Styles -->
 <style lang="less">
 	/* Mobile - 360px */
@@ -583,14 +748,18 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 			}
 
 			.cs-li {
+				background-color: var(--backgroundBreakBlue);
 				list-style: none;
 				margin: 0;
-				padding: 0;
+				padding: clamp(2.5rem, 4.1vw, 3.125rem) clamp(1.25rem, 3.4vw, 2rem);
 				display: flex;
 				align-items: flex-start;
 				justify-content: flex-start;
 				/* 16px - 20px */
 				gap: clamp(1rem, 2.5vw, 1.25rem);
+				border: 2px solid black;
+				border-radius: (12/16rem);
+				box-shadow: 10px 10px 0px -4px #000000;
 			}
 
 			.cs-li-picture {
@@ -638,7 +807,9 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 				font-weight: 700;
 				text-align: left;
 				margin: 0 0 (8/16rem) 0;
-				color: var(--headerColor);
+				color: var(--whiteText);
+				border-bottom: 2px solid white;
+				padding-bottom: 8px;
 			}
 
 			.cs-li-text {
@@ -646,7 +817,7 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 				line-height: 1.5em;
 				text-align: left;
 				margin: 0;
-				color: var(--bodyTextColor);
+				color: var(--whiteText);
 			}
 
 			.cs-picture {
@@ -667,7 +838,7 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 					top: 0;
 					left: 0;
 					object-fit: cover;
-					box-shadow: 7px 10px 0px -4px #000000;
+					box-shadow: 10px 10px 0px -4px #000000;
 					border-radius: 0.75rem;
 				}
 			}
@@ -690,7 +861,7 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 			.cs-content {
 				width: 50%;
 				/* Same as marign-bottom on .cs-picture, offsets its negative margin */
-				padding-bottom: clamp(5rem, 7vw, 7rem);
+				// padding-bottom: clamp(5rem, 7vw, 7rem);
 			}
 
 			.cs-picture {
@@ -728,112 +899,6 @@ import FenceWashIMG3 from "@assets/images/services/fenceWash3.jpeg";
 
 				.cs-li-picture {
 					background-color: var(--dark);
-				}
-			}
-		}
-	}
-
-	/*-- -------------------------- -->
-<---           Logos            -->
-<--- -------------------------- -*/
-
-	/* Mobile - 360px */
-	@media only screen and (min-width: 0rem) {
-		#logos-1565 {
-			padding: var(--sectionPadding);
-			background-color: #1a1a1a;
-			position: relative;
-			z-index: 1;
-
-			.cs-container {
-				width: 100%;
-				max-width: (1280/16rem);
-				margin: auto;
-			}
-
-			.cs-header {
-				font-size: (25/16rem);
-				text-align: center;
-				font-weight: 700;
-				line-height: 1.2em;
-				margin: 0;
-				color: var(--bodyTextColorWhite);
-				display: block;
-			}
-
-			.cs-logo-group {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				justify-content: center;
-				column-gap: (40/16rem);
-			}
-
-			.cs-picture {
-				/* 120px - 196px */
-				width: clamp(7.5rem, 12vw, 12.25rem);
-				/* 72px - 134px */
-				height: clamp(4.5rem, 12vw, 8.375rem);
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.cs-logo {
-				width: 100%;
-				height: auto;
-				height: auto;
-				margin: 0;
-				display: block;
-				object-fit: contain;
-			}
-
-			.logo-content {
-				color: white;
-			}
-
-			.cs-background {
-				width: 100%;
-				height: 100%;
-				max-height: (650/16rem);
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -1;
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					top: 0;
-					left: 0;
-				}
-			}
-		}
-	}
-
-	/* Tablet - 768px */
-	@media only screen and (min-width: 48rem) {
-		#logos-1565 {
-			/* 170px - 192px */
-			// padding-top: clamp(10.625rem, 17vw, 12rem);
-			.cs-logo-group {
-				justify-content: space-between;
-				flex-wrap: nowrap;
-			}
-		}
-	}
-
-	/* Dark Mode */
-	@media only screen and (min-width: 48rem) {
-		body.dark-mode {
-			#logos-1565 {
-				background-color: rgba(0, 0, 0, 0.6);
-
-				.cs-background {
-					img {
-						opacity: 0.35;
-					}
 				}
 			}
 		}

@@ -581,7 +581,7 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 7px 10px 0px -4px #000000;
+        box-shadow: 10px 10px 0px -4px #000000;
         border-radius: 0.75rem;
       }
 
@@ -1208,7 +1208,7 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
         opacity: 0;
         visibility: hidden;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 10px 16px;
-        border-bottom: 5px solid var(--primary);
+        border-bottom: 5px solid var(--backgroundBreakBlue);
         /* if you have 8 or more links in your dropdown nav, uncomment the columns property to make the list into 2 even columns. Change it to 3 or 4 if you need extra columns. Then remove the transition delays on the cs-drop-li so they don't have weird scattered animations */
         // columns: 2;
         position: absolute;
@@ -1276,7 +1276,8 @@ import LogoMobileDark from "@assets/images/PPP_wordmarkDark.png";
             background-color 0.3s;
 
           &:hover {
-            background-color: #f7f7f7;
+            background-color: var(--backgroundBreakBlue);
+            color: white;
           }
 
           &:before {

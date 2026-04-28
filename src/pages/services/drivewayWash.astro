@@ -5,6 +5,7 @@ import { Picture, getImage } from "astro:assets";
 // Components
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Banner from "@components/Banner/Banner.astro";
+import Stats from "@components/Stats/stats.astro";
 import CTA from "@components/CTA/CTASimple.astro";
 
 // Images
@@ -39,13 +40,21 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 						Driveway Pressure Washing in Jacksonville, FL
 					</h1>
 					<p class="cs-text">
-						Driveways are often the first surface noticed when approaching a
-						property. In Jacksonville’s climate, concrete and other driveway
-						materials collect dirt, tire marks, mildew, and organic growth.
-						Driveway pressure washing is used to remove this buildup and restore
-						a more even, clean appearance.
+						Driveways are often the first thing noticed when someone pulls up to
+						your property, and in Jacksonville's climate they take a beating
+						from dirt, tire marks, mildew, and organic growth faster than most
+						surfaces. Driveway pressure washing tackles that buildup directly,
+						focusing on concrete and similar hard surfaces to remove
+						surface-level staining, algae, and mildew and restore a cleaner,
+						more even appearance. Adjacent areas affected by overspray are
+						rinsed down as part of the process, so the surrounding space is left
+						tidy when the work is done. Before any cleaning starts, the driveway
+						and surrounding area are walked and assessed so cracks, slopes,
+						parked vehicles, and nearby plants are noted and accounted for. That
+						upfront check is what keeps the work focused and prevents surprises
+						for both sides.
 					</p>
-					<ul class="cs-ul">
+					<!-- <ul class="cs-ul">
 						<strong>What's Included?</strong>
 						<li class="cs-li">
 							Pressure washing of concrete and similar hard driveway surfaces
@@ -56,52 +65,59 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 						<li class="cs-li">
 							Rinsing of adjacent areas affected by overspray where appropriate
 						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="cs-content cs-content2">
-				<Picture
-					src={DrivewayIMG2}
-					alt="paver driveway being pressured washed"
-					width={608}
-					formats={["avif", "webp"]}
-					pictureAttributes={{ class: "cs-picture cs-picture2" }}
-				/>
-				<div class="cs-wrapper cs-wrapper2">
-					<ul class="cs-ul">
-						<strong>Benefits of Driveway Cleaning</strong>
-						<li class="cs-li">Curb appeal when arriving at the property</li>
-						<li class="cs-li">A more even visual appearance for all</li>
-						<li class="cs-li">Reduced slippery areas</li>
-					</ul>
-					<a class="cs-button-solid" href="/contact">Contact Us</a>
+					</ul> -->
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- SBS 2 -->
-	<div id="logos-1565">
+	<!-- 3-Card -->
+	<section id="services-1331">
 		<div class="cs-container">
-			<h1 class="logo-content">
-				Driveway pressure washing is available throughout Jacksonville, FL and
-				nearby communities within approximately 25 miles, including Yulee and
-				St. Johns.
-			</h1>
+			<h2 class="cs-h2">Benefits of a Clean Driveway</h2>
+			<ul class="cs-card-group">
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">Safer Surfaces Underfoot</h3>
+						<p class="cs-item-text">
+							Mold, mildew, and algae build up on driveway surfaces faster in
+							Jacksonville's climate than most homeowners expect. Over time that
+							organic growth creates slippery patches that are a real hazard for
+							anyone walking or pulling into the driveway. A pressure wash
+							clears it out and leaves the surface safer to use day to day.
+						</p>
+					</div>
+				</li>
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">A Cleaner First Impression</h3>
+						<p class="cs-item-text">
+							The driveway is one of the first things people notice when they
+							pull up to your property. Staining, discoloration, and buildup can
+							make an otherwise well-kept home look neglected from the street.
+							Cleaning it restores an even, maintained appearance that reflects
+							well on the rest of the property.
+						</p>
+					</div>
+				</li>
+				<li class="cs-item">
+					<div class="cs-link">
+						<h3 class="cs-h3">Long-Term Surface Protection</h3>
+						<p class="cs-item-text">
+							Concrete and pavers are durable, but the buildup that sits on them
+							over time works against that durability. Organic growth and
+							trapped moisture break down the surface material gradually,
+							leading to cracks and deterioration that cost real money to
+							repair. Regular cleaning is one of the simpler ways to protect
+							that investment and extend the life of the surface.
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<!-- Background Graphic -->
-		<picture class="cs-background">
-			<img
-				src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/waves-side.svg"
-				alt="waves"
-				width="1920"
-				height="300"
-				aria-hidden="true"
-				loading="lazy"
-				decoding="async"
-			/>
-		</picture>
-	</div>
+	</section>
+
+	<Stats />
 
 	<section id="sbs-1565">
 		<div class="cs-container">
@@ -117,18 +133,6 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 				<h2 class="cs-title">Driveway Cleaning Process</h2>
 				<ul class="cs-card-group">
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/price-tag.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Inspect Driveway and Surroundings</h3>
 							<p class="cs-li-text">
@@ -144,18 +148,6 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 						</div>
 					</li>
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/sheild.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Apply Pressure and Solution</h3>
 							<p class="cs-li-text">
@@ -169,18 +161,6 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 						</div>
 					</li>
 					<li class="cs-li">
-						<picture class="cs-li-picture">
-							<img
-								class="cs-li-icon"
-								aria-hidden="true"
-								src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/bag.svg"
-								decoding="async"
-								alt="icon"
-								width="32"
-								height="32"
-								loading="lazy"
-							/>
-						</picture>
 						<div class="cs-flex">
 							<h3 class="cs-h3">Rinse and Check Results</h3>
 							<p class="cs-li-text">
@@ -421,7 +401,7 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 					position: absolute;
 					top: 0;
 					left: 0;
-					box-shadow: 7px 10px 0px -4px #000000;
+					box-shadow: 10px 10px 0px -4px #000000;
 					border-radius: 0.75rem;
 				}
 			}
@@ -528,6 +508,194 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 	}
 </style>
 
+<!-- 3-Card -->
+<style lang="less">
+	/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+	/* Mobile - 360px */
+	@media only screen and (min-width: 0rem) {
+		#services-1331 {
+			padding: 0 (16/16rem) (80/16rem);
+			position: relative;
+			z-index: 1;
+
+			.cs-container {
+				width: 100%;
+				/* changes to 1280px at tablet */
+				max-width: (550/16rem);
+				margin: auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				/* 48px - 64px */
+				gap: clamp(2rem, 6vw, 3rem);
+			}
+
+			.cs-content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				/* centers content horizontally, set to flex-start to left align */
+				align-items: center;
+				/* set text align to left if content needs to be left aligned */
+				text-align: center;
+			}
+
+			.cs-h2 {
+				border-bottom: 3px solid black;
+			}
+
+			.cs-flex-group {
+				/* prevents flexbox from squishing it */
+				flex: none;
+			}
+
+			.cs-card-group {
+				width: 100%;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
+				row-gap: (16/16rem);
+			}
+
+			.cs-item {
+				list-style: none;
+				width: 100%;
+				box-sizing: border-box;
+				/* 40px - 60px top & bottom,  20px - 48px left & right, */
+				padding: clamp(2.5rem, 4.1vw, 3.125rem) clamp(1.25rem, 3.4vw, 2rem);
+				background-color: var(--backgroundBreakBlue);
+				grid-column: span 12;
+				transition:
+					transform 0.3s,
+					box-shadow 0.3s;
+				border: 2px solid black;
+				border-radius: 0.75rem;
+				box-shadow: 10px 10px 0px -4px #000000;
+
+				&:hover {
+					transform: translateY(-1rem);
+					box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+				}
+			}
+
+			.cs-link {
+				text-decoration: none;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				/* set text align to center if content needs to be centrally aligned */
+				text-align: left;
+			}
+
+			.cs-step {
+				font-size: var(--topperFontSize);
+				line-height: 1.2em;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				/* 48px - 100px */
+				margin-bottom: clamp(3rem, 7.8vw, 6.25rem);
+				color: var(--primary);
+				display: block;
+				text-align: inherit;
+			}
+
+			.cs-h3 {
+				font-size: (20/16rem);
+				line-height: 1.2em;
+				font-weight: 900;
+				margin: 0;
+				margin-bottom: (12/16rem);
+				color: var(--whiteText);
+				transition: color 0.3s;
+				text-align: inherit;
+				border-bottom: 2px solid white;
+				padding-bottom: 8px;
+			}
+
+			.cs-item-text {
+				/* 14px - 16px */
+				font-size: clamp(0.875rem, 1.5vw, 1rem);
+				font-weight: 900;
+				line-height: 1.5em;
+				margin: 0;
+				color: var(--whiteText);
+				transition: color 0.3s;
+				text-align: inherit;
+			}
+		}
+	}
+
+	/* Tablet - 768px */
+	@media only screen and (min-width: 48rem) {
+		#services-1331 {
+			.cs-container {
+				max-width: (1280/16rem);
+			}
+
+			.cs-content {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-end;
+				/* 48px - 80px */
+				gap: clamp(3rem, 6vw, 5rem);
+				text-align: left;
+			}
+
+			.cs-title {
+				margin: 0;
+			}
+
+			.cs-flex-group {
+				width: 50%;
+			}
+
+			.cs-card-group {
+				flex-direction: row;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				column-gap: (16/16rem);
+			}
+
+			.cs-item {
+				grid-column: span 4;
+			}
+		}
+	}
+
+	/* Dark Mode */
+	@media only screen and (min-width: 0rem) {
+		body.dark-mode {
+			#services-1331 {
+				background-color: rgba(0, 0, 0, 0.2);
+
+				.cs-topper {
+					color: var(--primaryLight);
+				}
+				.cs-title,
+				.cs-text,
+				.cs-h3,
+				.cs-item-text {
+					color: var(--bodyTextColorWhite);
+				}
+
+				.cs-text,
+				.cs-item-text {
+					opacity: 0.8;
+				}
+
+				.cs-item {
+					background-color: var(--medium);
+				}
+			}
+		}
+	}
+</style>
+
 <!-- SBS 2 Styles -->
 <style lang="less">
 	/* Mobile - 360px */
@@ -586,14 +754,18 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 			}
 
 			.cs-li {
+				background-color: var(--backgroundBreakBlue);
 				list-style: none;
 				margin: 0;
-				padding: 0;
+				padding: clamp(2.5rem, 4.1vw, 3.125rem) clamp(1.25rem, 3.4vw, 2rem);
 				display: flex;
 				align-items: flex-start;
 				justify-content: flex-start;
 				/* 16px - 20px */
 				gap: clamp(1rem, 2.5vw, 1.25rem);
+				border: 2px solid black;
+				border-radius: (12/16rem);
+				box-shadow: 10px 10px 0px -4px #000000;
 			}
 
 			.cs-li-picture {
@@ -641,7 +813,9 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 				font-weight: 700;
 				text-align: left;
 				margin: 0 0 (8/16rem) 0;
-				color: var(--headerColor);
+				color: var(--whiteText);
+				border-bottom: 2px solid white;
+				padding-bottom: 8px;
 			}
 
 			.cs-li-text {
@@ -649,7 +823,7 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 				line-height: 1.5em;
 				text-align: left;
 				margin: 0;
-				color: var(--bodyTextColor);
+				color: var(--whiteText);
 			}
 
 			.cs-picture {
@@ -670,7 +844,7 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 					top: 0;
 					left: 0;
 					object-fit: cover;
-					box-shadow: 7px 10px 0px -4px #000000;
+					box-shadow: 10px 10px 0px -4px #000000;
 					border-radius: 0.75rem;
 				}
 			}
@@ -693,7 +867,7 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 			.cs-content {
 				width: 50%;
 				/* Same as marign-bottom on .cs-picture, offsets its negative margin */
-				padding-bottom: clamp(5rem, 7vw, 7rem);
+				// padding-bottom: clamp(5rem, 7vw, 7rem);
 			}
 
 			.cs-picture {
@@ -731,112 +905,6 @@ import DrivewayIMG3 from "@assets/images/services/driveway3.jpeg";
 
 				.cs-li-picture {
 					background-color: var(--dark);
-				}
-			}
-		}
-	}
-
-	/*-- -------------------------- -->
-<---           Logos            -->
-<--- -------------------------- -*/
-
-	/* Mobile - 360px */
-	@media only screen and (min-width: 0rem) {
-		#logos-1565 {
-			padding: var(--sectionPadding);
-			background-color: #1a1a1a;
-			position: relative;
-			z-index: 1;
-
-			.cs-container {
-				width: 100%;
-				max-width: (1280/16rem);
-				margin: auto;
-			}
-
-			.cs-header {
-				font-size: (25/16rem);
-				text-align: center;
-				font-weight: 700;
-				line-height: 1.2em;
-				margin: 0;
-				color: var(--bodyTextColorWhite);
-				display: block;
-			}
-
-			.cs-logo-group {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				justify-content: center;
-				column-gap: (40/16rem);
-			}
-
-			.cs-picture {
-				/* 120px - 196px */
-				width: clamp(7.5rem, 12vw, 12.25rem);
-				/* 72px - 134px */
-				height: clamp(4.5rem, 12vw, 8.375rem);
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			.cs-logo {
-				width: 100%;
-				height: auto;
-				height: auto;
-				margin: 0;
-				display: block;
-				object-fit: contain;
-			}
-
-			.logo-content {
-				color: white;
-			}
-
-			.cs-background {
-				width: 100%;
-				height: 100%;
-				max-height: (650/16rem);
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: -1;
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					top: 0;
-					left: 0;
-				}
-			}
-		}
-	}
-
-	/* Tablet - 768px */
-	@media only screen and (min-width: 48rem) {
-		#logos-1565 {
-			/* 170px - 192px */
-			// padding-top: clamp(10.625rem, 17vw, 12rem);
-			.cs-logo-group {
-				justify-content: space-between;
-				flex-wrap: nowrap;
-			}
-		}
-	}
-
-	/* Dark Mode */
-	@media only screen and (min-width: 48rem) {
-		body.dark-mode {
-			#logos-1565 {
-				background-color: rgba(0, 0, 0, 0.6);
-
-				.cs-background {
-					img {
-						opacity: 0.35;
-					}
 				}
 			}
 		}

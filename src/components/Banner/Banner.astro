@@ -91,7 +91,7 @@ const { title, image } = Astro.props;
 					content: "";
 					width: 50vw;
 					height: 2px;
-					background: var(--secondary);
+					background: var(--primary);
 					opacity: 1;
 					position: absolute;
 					display: block;
@@ -121,6 +121,7 @@ const { title, image } = Astro.props;
 			.cs-link {
 				/* 16px - 20px */
 				font-size: clamp(1rem, 1.5vw, 1.25rem);
+				font-weight: bold;
 				line-height: 1.2em;
 				text-decoration: none;
 				color: var(--bodyTextColorWhite);
@@ -147,7 +148,7 @@ const { title, image } = Astro.props;
 				}
 
 				&.cs-active {
-					color: var(--secondary);
+					color: var(--primary);
 				}
 			}
 
@@ -168,7 +169,7 @@ const { title, image } = Astro.props;
 					height: 100%;
 					width: 100%;
 					background: var(--backgroundBreakBlue);
-					opacity: 0.5;
+					opacity: 0.75;
 					top: 0;
 					left: 0;
 					z-index: 1;
