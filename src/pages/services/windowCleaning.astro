@@ -57,20 +57,20 @@ import WindowIMG3 from "@assets/images/services/window3.jpeg";
 				<ul class="cs-stats">
 					<li class="cs-stat">
 						<span class="cs-desc"
-							>Clearer views from interior spaces, allowing sunlight to shine
-							through undisturbed</span
-						>
+							>Clean windows let natural light pass through clearly and brighten
+							interior spaces noticeably.
+						</span>
 					</li>
 					<li class="cs-stat">
 						<span class="cs-desc"
 							>A more polished look to the front and rear of the property,
-							giving it an aesthetic look</span
-						>
+							giving it an aesthetic look
+						</span>
 					</li>
 					<li class="cs-stat">
 						<span class="cs-desc"
-							>Complementary appearance when combined with other cleaning
-							services</span
+							>Window cleaning pairs naturally with other exterior services for
+							a more consistent overall result.</span
 						>
 					</li>
 				</ul>
@@ -223,8 +223,11 @@ import WindowIMG3 from "@assets/images/services/window3.jpeg";
 			.cs-stat {
 				list-style: none;
 				margin: 0;
-				padding: 0 0 (24/16rem) 0;
-				border-bottom: 1px solid var(--primary);
+				padding: (12/16rem);
+				border: 2px solid black;
+				border-radius: (12/16rem);
+				box-shadow: 10px 10px 0px -4px #000000;
+				background-color: var(--backgroundBreakBlue);
 				/* making flex so we can align a heading with 1 line to the bottom */
 				display: flex;
 				grid-column: span 4;
@@ -251,7 +254,7 @@ import WindowIMG3 from "@assets/images/services/window3.jpeg";
 				text-align: left;
 				/* auto margin top will push text to bottom if there's only one line */
 				margin: 0;
-				color: var(--bodyTextColor);
+				color: var(--whiteText);
 			}
 		}
 	}

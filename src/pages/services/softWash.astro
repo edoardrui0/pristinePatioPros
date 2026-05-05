@@ -57,19 +57,20 @@ import SoftWashIMG3 from "@assets/images/services/softWash3.jpeg";
 				<ul class="cs-stats">
 					<li class="cs-stat">
 						<span class="cs-desc"
-							>Cleaner, more uniform siding that supports and improves curb
-							appeal</span
+							>Soft washing restores even, clean siding that makes the whole
+							exterior look maintained.
+						</span>
+					</li>
+					<li class="cs-stat">
+						<span class="cs-desc"
+							>Organic growth traps moisture against siding and works against
+							the material over time.</span
 						>
 					</li>
 					<li class="cs-stat">
 						<span class="cs-desc"
-							>Reduced organic growth that retains moisture close to the home</span
-						>
-					</li>
-					<li class="cs-stat">
-						<span class="cs-desc"
-							>A more maintained appearance for visitors or even potential
-							buyers</span
+							>Clean siding signals a well-kept property to guests, neighbors,
+							and potential buyers.</span
 						>
 					</li>
 				</ul>
@@ -224,8 +225,11 @@ import SoftWashIMG3 from "@assets/images/services/softWash3.jpeg";
 			.cs-stat {
 				list-style: none;
 				margin: 0;
-				padding: 0 0 (24/16rem) 0;
-				border-bottom: 1px solid var(--primary);
+				padding: (12/16rem);
+				border: 2px solid black;
+				border-radius: (12/16rem);
+				box-shadow: 10px 10px 0px -4px #000000;
+				background-color: var(--backgroundBreakBlue);
 				/* making flex so we can align a heading with 1 line to the bottom */
 				display: flex;
 				grid-column: span 4;
@@ -252,7 +256,7 @@ import SoftWashIMG3 from "@assets/images/services/softWash3.jpeg";
 				text-align: left;
 				/* auto margin top will push text to bottom if there's only one line */
 				margin: 0;
-				color: var(--bodyTextColor);
+				color: var(--whiteText);
 			}
 		}
 	}

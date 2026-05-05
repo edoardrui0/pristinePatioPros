@@ -51,10 +51,17 @@ import GutterIMG3 from "@assets/images/services/gutter3.jpeg";
 				<div class="cs-flex">
 					<h2 class="cs-title">Gutter Cleaning in Jacksonville, FL</h2>
 					<p class="cs-text">
-						Gutters are intended to move water away from the home. When debris
-						collects in these channels, water can overflow and run down siding
-						or pool near the foundation. Gutter cleaning is used to remove this
-						buildup so water can flow more freely.
+						Gutters are designed to move water away from the home, but in
+						Jacksonville the combination of heavy rain seasons and nearby tree
+						coverage means they fill up with debris faster than most homeowners
+						expect. When that buildup goes unaddressed, water overflows and runs
+						down the siding, pools near the foundation, or finds its way into
+						areas it was never meant to reach. That kind of water damage adds up
+						over time and tends to be far more expensive to fix than the
+						cleaning that could have prevented it. Gutter cleaning removes the
+						leaves, dirt, and debris blocking those channels so water can move
+						the way it is supposed to, especially when the next storm rolls
+						through.
 					</p>
 				</div>
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
@@ -70,33 +77,29 @@ import GutterIMG3 from "@assets/images/services/gutter3.jpeg";
 			</div>
 			<ul class="cs-card-group">
 				<li class="cs-item">
-					<h3 class="cs-h3">What Gutter Cleaning Includes</h3>
-					<ul class="cs-ul">
-						<li class="cs-li">
-							Safe removal of leaves and debris from accessible gutters
-						</li>
-						<li class="cs-li">
-							Inspection of visible downspout entry points for blockages
-						</li>
-						<li class="cs-li">
-							Cleanup of debris from the immediate work area after service
-						</li>
-					</ul>
+					<h3 class="cs-h3">What the Service Covers</h3>
+					<p class="cs-p">
+						Gutter cleaning includes safe removal of leaves and debris, along
+						with an inspection of visible downspout entry points for blockages.
+						The work area is cleaned up after the service is complete.
+					</p>
 				</li>
 				<li class="cs-item">
-					<h3 class="cs-h3">Why Gutter Cleaning Is Important</h3>
-					<ul class="cs-ul">
-						<li class="cs-li">
-							Supports proper drainage away from the home, helping keep things
-							clean
-						</li>
-						<li class="cs-li">
-							Reduces the chance of overflow onto walkways and landscaping
-						</li>
-						<li class="cs-li">
-							Helps limit unnecessary moisture exposure on siding and trim
-						</li>
-					</ul>
+					<h3 class="cs-h3">Keeping Water Where It Belongs</h3>
+					<p class="cs-p">
+						Clogged gutters push water onto walkways, landscaping, and along the
+						foundation in ways that cause gradual damage. Regular cleaning
+						supports proper drainage and reduces overflow ending up somewhere it
+						should not.
+					</p>
+				</li>
+				<li class="cs-item">
+					<h3 class="cs-h3">Protecting the Exterior of the Home</h3>
+					<p class="cs-p">
+						When gutters overflow consistently, the siding and trim below take
+						on more moisture than they were built to handle. Keeping them clear
+						limits that exposure and reduces unnecessary wear on the exterior.
+					</p>
 				</li>
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
 				<li class="cs-item cs-item-picture">
@@ -229,7 +232,6 @@ import GutterIMG3 from "@assets/images/services/gutter3.jpeg";
 				list-style: none;
 				/* 24px - 32px */
 				padding: clamp(1.5rem, 5vw, 2rem);
-				border-left: 4px solid var(--primary);
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
@@ -241,8 +243,10 @@ import GutterIMG3 from "@assets/images/services/gutter3.jpeg";
 					content: "";
 					width: 100%;
 					height: 100%;
-					background: var(--primary);
-					opacity: 0.05;
+					background: var(--backgroundBreakBlue);
+					border: 2px solid black;
+					border-radius: (12/16rem);
+					box-shadow: 10px 10px 0px -4px #000000;
 					display: block;
 					position: absolute;
 					top: 0;
@@ -282,11 +286,17 @@ import GutterIMG3 from "@assets/images/services/gutter3.jpeg";
 			}
 
 			.cs-h3 {
-				font-size: (16/16rem);
+				width: 100%;
+				border-bottom: 2px solid white;
+				font-size: (20/16rem);
 				line-height: 1.2em;
 				font-weight: 700;
 				margin: 0;
-				color: var(--headerColor);
+				color: var(--whiteText);
+			}
+
+			.cs-p {
+				color: var(--whiteText);
 			}
 
 			.cs-item-text {

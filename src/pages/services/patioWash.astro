@@ -50,10 +50,16 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 					<h2 class="cs-title">Patio Pressure Washing in Jacksonville, FL</h2>
 					<p class="cs-text">
 						Patios and outdoor seating areas are used for relaxing, cooking, and
-						spending time with family and guests. Over time, these surfaces can
-						darken from moisture, foot traffic, and organic growth. Patio
-						pressure washing is used to reduce this buildup and create a more
-						comfortable, usable outdoor space.
+						spending time with family and guests, which means they see a lot of
+						foot traffic and exposure to the elements year round. In
+						Jacksonville's climate, that kind of use adds up quickly. Surfaces
+						darken from moisture, organic growth takes hold in the grout lines
+						and along the edges, and what used to be an inviting space starts to
+						look worn and uninviting. Patio pressure washing is used to reduce
+						that buildup and restore a cleaner, more comfortable surface that
+						actually feels good to spend time on. The difference is usually
+						noticeable right away, and it tends to make the surrounding outdoor
+						area feel more pulled together as a whole.
 					</p>
 				</div>
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
@@ -69,19 +75,30 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 			</div>
 			<ul class="cs-card-group">
 				<li class="cs-item">
-					<h3 class="cs-h3">Surfaces Commonly Cleaned</h3>
-					<ul class="cs-ul">
-						<li class="cs-li">Concrete patios</li>
-						<li class="cs-li">Paver patios</li>
-						<li class="cs-li">
-							Outdoor seating and lounge areas adjacent to the home
-						</li>
-						<li class="cs-li">
-							Walkways that connect patios to other parts of the property
-						</li>
-					</ul>
+					<h3 class="cs-h3">What Gets Cleaned</h3>
+					<p class="cs-p">
+						Patio pressure washing covers concrete and paver surfaces, outdoor
+						seating areas, and the walkways connecting the patio to the rest of
+						the property.
+					</p>
 				</li>
 				<li class="cs-item">
+					<h3 class="cs-h3">A Surface Worth Gathering On</h3>
+					<p class="cs-p">
+						Algae and mildew make patio surfaces slippery and less safe,
+						especially when wet. Cleaning removes that organic growth and leaves
+						a more even, stable surface for furniture and everyday use.
+					</p>
+				</li>
+				<li class="cs-item">
+					<h3 class="cs-h3">A Better View From Inside the Home</h3>
+					<p class="cs-p">
+						A clean patio changes how the outdoor space feels from inside the
+						house. Looking out onto a bright, uniform surface is a noticeable
+						improvement over a darkened, stained one.
+					</p>
+				</li>
+				<!-- <li class="cs-item">
 					<h3 class="cs-h3">Results of Patio Cleaning</h3>
 					<ul class="cs-ul">
 						<li class="cs-li">
@@ -96,7 +113,7 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 							the home
 						</li>
 					</ul>
-				</li>
+				</li> -->
 				<!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
 				<li class="cs-item cs-item-picture">
 					<Picture
@@ -228,7 +245,6 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 				list-style: none;
 				/* 24px - 32px */
 				padding: clamp(1.5rem, 5vw, 2rem);
-				border-left: 4px solid var(--primary);
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
@@ -240,8 +256,10 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 					content: "";
 					width: 100%;
 					height: 100%;
-					background: var(--primary);
-					opacity: 0.05;
+					background: var(--backgroundBreakBlue);
+					border: 2px solid black;
+					border-radius: (12/16rem);
+					box-shadow: 10px 10px 0px -4px #000000;
 					display: block;
 					position: absolute;
 					top: 0;
@@ -281,11 +299,17 @@ import PatioIMG3 from "@assets/images/services/patio3.jpeg";
 			}
 
 			.cs-h3 {
-				font-size: (16/16rem);
+				width: 100%;
+				border-bottom: 2px solid white;
+				font-size: (20/16rem);
 				line-height: 1.2em;
 				font-weight: 700;
 				margin: 0;
-				color: var(--headerColor);
+				color: var(--whiteText);
+			}
+
+			.cs-p {
+				color: var(--whiteText);
 			}
 
 			.cs-item-text {
